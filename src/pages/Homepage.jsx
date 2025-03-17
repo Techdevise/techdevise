@@ -132,83 +132,83 @@ function Homepage() {
       </div>
 
       {/* Experience Section */}
-      <div className="relative z-10 mx-auto mt-[50px] w-[1670px] h-[750px] opacity-100 px-4 py-8 bg-[#000000]">
-        {/* Main Content Container */}
-        <div className="flex gap-12 h-full">
-          {/* Left Column - Text & Primary Cards */}
-          <div className="w-[45%] flex flex-col">
-            {/* Text Section */}
-            <div className="mb-16">
-              <h1 className="text-[56px] font-black text-[#A3E4C5] leading-none">Experience</h1>
-              <p className="mt-8 text-[20px] text-gray-300 leading-relaxed max-w-[550px]">
-                With years of experience in the IT industry, we have successfully delivered cutting-edge software solutions,
-                web and mobile applications, and enterprise-grade systems. Our expertise spans various technologies, ensuring
-                innovative, scalable, and secure digital solutions tailored to your business needs.
-              </p>
-            </div>
+    {/* Experience Section */}
+<div className="relative z-10 mx-auto mt-[50px] w-full max-w-[1670px] h-auto opacity-100 px-4 py-8 bg-[#000000]">
+  {/* Main Content Container */}
+  <div className="flex flex-col md:flex-row gap-12 h-full">
+    {/* Left Column - Text & Primary Cards */}
+    <div className="w-full md:w-[45%] flex flex-col">
+      {/* Text Section */}
+      <div className="mb-16">
+        <h1 className="text-[56px] font-black text-[#A3E4C5] leading-none">Experience</h1>
+        <p className="mt-8 text-[20px] text-gray-300 leading-relaxed max-w-[550px]">
+          With years of experience in the IT industry, we have successfully delivered cutting-edge software solutions,
+          web and mobile applications, and enterprise-grade systems. Our expertise spans various technologies, ensuring
+          innovative, scalable, and secure digital solutions tailored to your business needs.
+        </p>
+      </div>
 
-            {/* Primary Cards Column */}
-            <div className="flex flex-1 flex-row gap-8">
-              {/* Years of Experience Card */}
-              <div className="bg-[#4CAF7A] w-[450px] h-[320px] rounded-[26px] p-8 flex flex-col justify-between relative">
-                <span className="text-[72px] font-black">10+</span>
-                <div className="bg-[#BFEAD2] width-[300px] h-[80px] absolute bottom-0 left-0 right-0 rounded-b-[26px] flex items-center justify-center">
-                  <span className="text-[28px] font-semibold">Years of Experience</span>
-                </div>
-              </div>
-
-              {/* Clients Card */}
-              <div className="bg-[#E8F3BA] w-[450px] h-[320px] rounded-[26px] p-8 flex flex-col justify-between relative">
-                <span className="text-[72px] font-black">500+</span>
-                <div className="bg-[#F7FAD9] h-[80px] absolute bottom-0 left-0 right-0 rounded-b-[26px] flex items-center justify-center">
-                  <span className="text-[28px] font-semibold">Clients</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column - Secondary Cards Grid */}
-          <div className="w-[55%]">
-            <div className="grid grid-cols-2 gap-8 h-full">
-              {/* Row 1 */}
-              <div className="bg-[#96E3DC] h-[320px] rounded-[26px] p-8 relative">
-                <span className="text-[72px] font-black">500+</span>
-                <div className="bg-[#CDE9E6] h-[80px] absolute bottom-0 left-0 right-0 rounded-b-[26px] flex items-center justify-center">
-                  <span className="text-[28px] font-semibold">Clients</span>
-                </div>
-              </div>
-
-              <div className="bg-[#A5D1F3] h-[320px] rounded-[26px] p-8 relative">
-                <span className="text-[72px] font-black">20+</span>
-                <div className="bg-[#D1E8FB] h-[80px] absolute bottom-0 left-0 right-0 rounded-b-[26px] flex items-center justify-center">
-                  <span className="text-[28px] font-semibold">Countries</span>
-                </div>
-              </div>
-
-              {/* Row 2 */}
-              <div className="bg-[#F5A8B8] h-[320px] rounded-[26px] p-8 relative">
-                <span className="text-[72px] font-black">500+</span>
-                <div className="bg-[#FCD6DD] h-[80px] absolute bottom-0 left-0 right-0 rounded-b-[26px] flex items-center justify-center">
-                  <span className="text-[28px] font-semibold">Clients</span>
-                </div>
-              </div>
-
-              <div className="bg-[#E98E86] mb-200 h-[320px] rounded-[26px] p-8 relative">
-                <span className="text-[72px] font-black">20+</span>
-                <div className="bg-[#F6B9B5] h-[80px] absolute bottom-0 left-0 right-0 rounded-b-[26px] flex items-center justify-center">
-                  <span className="text-[28px] font-semibold">Countries</span>
-                </div>
-              </div>
-            </div>
+      {/* Primary Cards Column */}
+      <div className="flex flex-col md:flex-row gap-8">
+        {/* Years of Experience Card */}
+        <div className="bg-[#4CAF7A] w-full md:w-[450px] h-[320px] rounded-[26px] p-8 flex flex-col justify-between relative">
+          <span className="text-[72px] font-black">10+</span>
+          <div className="bg-[#BFEAD2] h-[80px] absolute bottom-0 left-0 right-0 rounded-b-[26px] flex items-center justify-center">
+            <span className="text-[28px] font-semibold">Years of Experience</span>
           </div>
         </div>
 
-
-        {/* Rotated Experience Text */}
-        <div className="absolute right-[-280px] top-1/2 transform -translate-y-1/2 rotate-90 origin-center">
-          <h1 className="text-[72px] font-black text-[#A3E4C5] opacity-30 tracking-widest">EXPERIENCE</h1>
+        {/* Clients Card */}
+        <div className="bg-[#E8F3BA] w-full md:w-[450px] h-[320px] rounded-[26px] p-8 flex flex-col justify-between relative">
+          <span className="text-[72px] font-black">500+</span>
+          <div className="bg-[#F7FAD9] h-[80px] absolute bottom-0 left-0 right-0 rounded-b-[26px] flex items-center justify-center">
+            <span className="text-[28px] font-semibold">Clients</span>
+          </div>
         </div>
       </div>
+    </div>
+
+    {/* Right Column - Secondary Cards Grid */}
+    <div className="w-full md:w-[55%]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full">
+        {/* Row 1 */}
+        <div className="bg-[#96E3DC] h-[320px] rounded-[26px] p-8 relative">
+          <span className="text-[72px] font-black">500+</span>
+          <div className="bg-[#CDE9E6] h-[80px] absolute bottom-0 left-0 right-0 rounded-b-[26px] flex items-center justify-center">
+            <span className="text-[28px] font-semibold">Clients</span>
+          </div>
+        </div>
+
+        <div className="bg-[#A5D1F3] h-[320px] rounded-[26px] p-8 relative">
+          <span className="text-[72px] font-black">20+</span>
+          <div className="bg-[#D1E8FB] h-[80px] absolute bottom-0 left-0 right-0 rounded-b-[26px] flex items-center justify-center">
+            <span className="text-[28px] font-semibold">Countries</span>
+          </div>
+        </div>
+
+        {/* Row 2 */}
+        <div className="bg-[#F5A8B8] h-[320px] rounded-[26px] p-8 relative">
+          <span className="text-[72px] font-black">500+</span>
+          <div className="bg-[#FCD6DD] h-[80px] absolute bottom-0 left-0 right-0 rounded-b-[26px] flex items-center justify-center">
+            <span className="text-[28px] font-semibold">Clients</span>
+          </div>
+        </div>
+
+        <div className="bg-[#E98E86] h-[320px] rounded-[26px] p-8 relative">
+          <span className="text-[72px] font-black">20+</span>
+          <div className="bg-[#F6B9B5] h-[80px] absolute bottom-0 left-0 right-0 rounded-b-[26px] flex items-center justify-center">
+            <span className="text-[28px] font-semibold">Countries</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Rotated Experience Text */}
+  <div className="absolute right-[-280px] top-1/2 transform -translate-y-1/2 rotate-90 origin-center">
+    <h1 className="text-[72px] font-black text-[#A3E4C5] opacity-30 tracking-widest">EXPERIENCE</h1>
+  </div>
+</div>
       <TechOfferings />
 
       <div className="container mx-auto p-4" style={{

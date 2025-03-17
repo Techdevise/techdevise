@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Button from '../components/Button';
 // import { Button } from "../../components/ui/button"; 
 // import { Menu } from "lucide-react";
 
@@ -40,6 +41,14 @@ const Navbar = () => {
         <Link to="/about" className="w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300">About Us</Link>
         <Link to="/contact" className="whitespace-nowrap w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300">Contact Us</Link>
       </div>
+          {/* Get in Touch Button */}
+      <div className="ml-[-670px]"> 
+        <Button />
+      </div>
+    
+      
+    
+      
 
       {/* Get in Touch Button */}
       {/* <Button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg hidden md:block">
@@ -63,6 +72,9 @@ const Navbar = () => {
           <Link to="/about" className="block">About Us</Link>
           <Link to="/contact" className="block">Contact Us</Link>
           {/* <Button className="w-full bg-green-500 hover:bg-green-600">Get in Touch</Button> */}
+          <div className="flex justify-center items-center h-screen">
+      <Button />
+    </div>
         </div>
       )}
     </nav>

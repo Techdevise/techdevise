@@ -2,55 +2,36 @@
 
 export default {
   content: [
-    "./index.html", 
-    "./src/**/*.{js,ts,jsx,tsx}"
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif', 'Archivo'],
+        montserrat: ['Montserrat', 'Archivo', 'sans-serif'],
+      },
+      screens: {
+        'xs': '475px', 
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+      },
+      colors: {
+        'primary-green': '#A3C3BC',
+        'secondary-green': '#8CBEB7',
+        'background-dark': '#061611',
+        'overlay-dark': '#0A1F1A',
+        'border-green': '#41B883',
+        'vision-blue': '#2563eb',
+      },
+      borderRadius: {
+        'custom': '20px 40px 60px 80px',
+        '26': '26px',
+        'mixed-vision': '30px 60px 30px 60px',
       },
     },
   },
   plugins: [],
-};
-// module.exports = {
-//   theme: {
-//     extend: {
-//       colors: {
-//         'A3C3BC': '#A3C3BC',
-//         '8CBEB7': '#8CBEB7',
-//         '061611': '#061611',
-//         '0A1F1A': '#0A1F1A'
-//       },
-//       borderRadius: {
-//         'custom': '20px 40px 60px 80px'
-//       }
-//     }
-//   }
-// }
-// module.exports = {
-//   theme: {
-//     extend: {
-//       borderRadius: {
-//         '26': '26px',
-//       },
-//       colors: {
-//         'border-green': '#41B883',
-//       }
-//     }
-//   }
-// }
-// module.exports = {
-//   theme: {
-//     extend: {
-//       borderRadius: {
-//         'mixed-vision': '30px 60px 30px 60px',
-//       },
-//       colors: {
-//         'vision-blue': '#2563eb',
-//       }
-//     }
-//   }
-// }
-
+}
