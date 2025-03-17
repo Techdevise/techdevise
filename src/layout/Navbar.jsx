@@ -27,7 +27,16 @@ const Navbar = () => {
           </div>
         </div>
         <Link to="/portfolio" className="w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300">Portfolio</Link>
-        <Link to="/blog" className="w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300 mr-1">Blog</Link>
+        <div className="relative group">
+    <Link to="/blog" className="w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300 mr-1">
+        Blog
+    </Link>
+    <div className="absolute left-0 mt-2 w-40 bg-white text-black shadow-lg rounded-md hidden group-hover:block group-focus:block">
+        <Link to="/blog/blog-details" className="block px-4 py-2 hover:bg-gray-200">
+            Blog Details
+        </Link>
+    </div>
+</div>
         <Link to="/about" className="w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300">About Us</Link>
         <Link to="/contact" className="whitespace-nowrap w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300">Contact Us</Link>
       </div>
