@@ -15,32 +15,26 @@ const brands = [
 
 const TrustedBy = () => {
   return (
-    <div className="w-full h-[166px] bg-[#061611] text-white flex items-center justify-center">
-      <div className="w-[272px] h-[54px] flex items-center pr-12">
-        <div>
-          <p className="w-[272px] h-[24px] font-bold text-20px font-Montserrat ml-[-10px]">Trusted By</p>
-          <p className="text-lg font-bold text-white ml-[-10px]">
-            Our global clients Network
-          </p>
-        </div>
+    <div className="w-full h-[166px] bg-[#061611] text-white flex flex-col items-center justify-center overflow-hidden relative">
+      <div className="text-center z-10 mb-4">
+        {/* <p className="text-2xl font-bold font-Montserrat mt-[-80px]">Trusted By</p>
+        <p className="text-lg font-bold">Our global clients Network</p> */}
       </div>
-
-      {/* Brand Section */}
-      <div className="flex items-center w-[1492] h-[161] gap-40">
-        {brands.map((brand, index) => (
-          <div key={index} className="flex flex-col items-center opacity-60 hover:opacity-100 transition duration-300">
-            <img
-              src={brand.icon}
-              alt={brand.name}
-              className="h-10 mb-2"
-            />
-            <p className="text-sm text-gray-400">{brand.name}</p>
-          </div>
-        ))}
+      <div className="absolute bottom-0 w-full overflow-hidden">
+        <div className="flex animate-scroll items-center">
+          {[...brands, ...brands].map((brand, index) => (
+            <div 
+              key={index}
+              className="flex-shrink-0 mx-16 flex flex-col items-center opacity-60 hover:opacity-100 transition-opacity duration-300"
+            >
+              <img src={brand.icon} alt={brand.name} className="h-10 mb-7" />
+              <p className="text-lg text-gray-400 mb-5 font-bold">{brand.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
 export default TrustedBy;
-

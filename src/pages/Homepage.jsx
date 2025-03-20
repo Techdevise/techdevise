@@ -205,9 +205,12 @@ function Homepage() {
   </div>
 
   {/* Rotated Experience Text */}
-  <div className="absolute right-[-280px] top-1/2 transform -translate-y-1/2 rotate-90 origin-center">
-    <h1 className="text-[72px] font-black text-[#A3E4C5] opacity-30 tracking-widest">EXPERIENCE</h1>
-  </div>
+  {/* <div className="absolute right-[-50px] top-1/2 transform -translate-y-1/2 -rotate-91 origin-center">
+    <div className="h-full border-l-2 border-[#0D261E] opacity-40"></div>
+    <h1 className="text-[72px] font-black text-[#0D261E]">
+      Experience
+    </h1>
+  </div> */}
 </div>
       <TechOfferings />
 
