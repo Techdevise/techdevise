@@ -1,11 +1,81 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const clocks = [
-  { country: "India", time: "08:00:00", color: "bg-blue-300" },
-  { country: "Canada", time: "08:00:00", color: "bg-red-300" },
-  { country: "USA", time: "08:00:00", color: "bg-pink-200" },
-  { country: "Netherland", time: "08:00:00", color: "bg-green-300" },
+  { country: "India", timeZone: "Asia/Kolkata", color: "bg-blue-300" },
+  { country: "Canada", timeZone: "America/Toronto", color: "bg-red-300" },
+  { country: "USA", timeZone: "America/New_York", color: "bg-pink-200" },
+  { country: "Netherland", timeZone: "Europe/Amsterdam", color: "bg-green-300" },
 ];
+
+const Clock = ({ country, timeZone, color }) => {
+  const [time, setTime] = useState(new Date().toLocaleTimeString("en-US", { timeZone }));
+
+  useEffect(() => {
+    // Update time every second
+    const interval = setInterval(() => {
+      setTime(new Date().toLocaleTimeString("en-US", { timeZone }));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [timeZone]);
+
+  // Get hours, minutes, and seconds to calculate rotation angles
+  const date = new Date(new Date().toLocaleString("en-US", { timeZone }));
+  const hours = date.getHours() % 12;
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+
+  // Calculate rotation angles
+  const hourAngle = (hours * 30) + (minutes * 0.5); // 30 degrees per hour + 0.5 degrees per minute
+  const minuteAngle = minutes * 6; // 6 degrees per minute
+  const secondAngle = seconds * 6; // 6 degrees per second
+
+  return (
+    <div className="flex flex-col items-center">
+      {/* Clock Container */}
+      <div className={`w-32 h-32 ${color} rounded-full flex items-center justify-center border-[3px] border-gray-300 shadow-md relative`}>
+        {/* Clock Hands */}
+        <div className="relative w-full h-full flex items-center justify-center">
+          {/* Hour Hand */}
+          <div
+            className="absolute w-[4px] h-[30%] bg-gray-600 top-[20%] left-1/2 transform -translate-x-1/2 origin-bottom"
+            style={{ transform: `translateX(-50%) rotate(${hourAngle}deg)` }}
+          ></div>
+          {/* Minute Hand */}
+          <div
+            className="absolute w-[3px] h-[40%] bg-gray-800 top-[10%] left-1/2 transform -translate-x-1/2 origin-bottom"
+            style={{ transform: `translateX(-50%) rotate(${minuteAngle}deg)` }}
+          ></div>
+          {/* Second Hand */}
+          <div
+            className="absolute w-[1.5px] h-[45%] bg-red-500 top-[5%] left-1/2 transform -translate-x-1/2 origin-bottom shadow-md"
+            style={{ transform: `translateX(-50%) rotate(${secondAngle}deg)` }}
+          ></div>
+          {/* Center Dot */}
+          <div className="absolute w-3 h-3 bg-red-500 rounded-full inset-0 m-auto z-10 shadow-md"></div>
+          
+          {/* Clock Markers */}
+          {/* Top */}
+          <div className="absolute w-[2px] h-4 bg-orange-400 top-[4px] left-1/2 transform -translate-x-1/2"></div>
+          {/* Right */}
+          <div className="absolute w-[2px] h-4 bg-orange-400 right-[4px] top-1/2 transform -translate-y-1/2"></div>
+          {/* Bottom */}
+          <div className="absolute w-[2px] h-4 bg-orange-400 bottom-[4px] left-1/2 transform -translate-x-1/2"></div>
+          {/* Left */}
+          <div className="absolute w-[2px] h-4 bg-orange-400 left-[4px] top-1/2 transform -translate-y-1/2"></div>
+        </div>
+      </div>
+
+      {/* Country and Time */}
+      <p className="mt-2 font-bold w-[120px] h-[34px] opacity-100 font-montserrat text-xl text-center leading-5">
+        {country}
+      </p>
+      <p className="text-gray-400 w-[120px] h-[34px] opacity-100 font-montserrat text-xl text-center">
+        {time}
+      </p>
+    </div>
+  );
+};
 
 const TechOfferings = () => {
   return (
@@ -20,37 +90,27 @@ const TechOfferings = () => {
       </div>
 
       <div className="flex flex-nowrap gap-8 ml-[90px] overflow-visible">
-        {/* Staff Augmentation Card */}
-        <div className="min-w-[1215px] bg-[#0F261E] flex gap-8 h-[436px] rounded-3xl">
-          <div className="w-[352px] bg-green-800 text-white p-6 rounded-full h-[352px] mt-10 ml-[50px] flex flex-col items-center justify-center border-2 border-dashed border-white">
-            <h3 className="text-2xl font-bold mb-2">Staff Augmentation</h3>
-            <p className="text-center text-gray-300">
-              Hire pre-vetted developers skilled in the latest technologies, ready
-              to work around the clock to meet your project needs.
-            </p>
-          </div>
+  {/* Staff Augmentation Card */}
+  <div className="min-w-[1215px] bg-[#0F261E] flex gap-8 h-[436px] rounded-3xl transition-transform duration-300">
+    <div className="w-[352px] bg-green-800 text-white p-6 rounded-full h-[352px] mt-10 ml-[50px] flex flex-col items-center justify-center border-2 border-dashed border-white transition-all duration-300 ease-in-out hover:bg-green-700 hover:shadow-lg hover:scale-105">
+      <h3 className="text-2xl font-bold mb-2 transition-colors duration-300 ease-in-out hover:text-yellow-300">Staff Augmentation</h3>
+      <p className="text-center text-gray-300 transition-colors duration-300 ease-in-out hover:text-gray-100">
+        Hire pre-vetted developers skilled in the latest technologies, ready
+        to work around the clock to meet your project needs.
+      </p>
+    </div>
 
-          {/* Clocks Section */}
-          <div className="flex gap-6 mt-7 flex-nowrap">
-            {clocks.map((clock, index) => (
-              <div key={index} className="flex flex-col items-center shrink-0">
-                <div
-                  className={`w-32 h-32 ${clock.color} rounded-full flex items-center justify-center border-2 border-gray-400 shadow-md`}
-                >
-                  <div className="relative w-16 h-16">
-                    <div className="absolute w-[2px] h-8 bg-black top-0 left-1/2 transform -translate-x-1/2 origin-bottom rotate-45"></div>
-                    <div className="absolute w-[2px] h-6 bg-red-500 top-0 left-1/2 transform -translate-x-1/2 origin-bottom rotate-90"></div>
-                  </div>
-                </div>
-                <p className="mt-2 font-bold w-[89px] h-[34px] opacity-100 font-montserrat text-xl text-center leading-5">
-                  {clock.country}
-                </p>
-                <p className="text-gray-400 w-[89px] h-[34px] opacity-100 font-montserrat text-xl text-center">
-                  {clock.time}
-                </p>
-              </div>
-            ))}
-          </div>
+        {/* Clocks Section */}
+      <div className="grid grid-cols-3 grid-rows-2 gap-x-12 gap-y-8 mt-2 h-full w-[800px]">
+        {clocks.map((clock, index) => (
+          <Clock
+            key={index}
+            country={clock.country}
+            timeZone={clock.timeZone}
+            color={clock.color}
+          />
+        ))}
+      </div>
         </div>
 
         {/* Offshore Development Section */}

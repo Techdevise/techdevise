@@ -1,74 +1,91 @@
-import React from 'react';
+import { useEffect, useState, useRef } from 'react';
 
-function ExperienceSection() {
+const ExperienceCard = ({ targetValue, label, bgColor, highlightColor }) => {
+  const [count, setCount] = useState(0);
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    let observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          let start = 0;
+          const duration = 5000; 
+          const increment = targetValue / (duration / 16);
+
+          const counter = setInterval(() => {
+            start += increment;
+            if (start >= targetValue) {
+              setCount(targetValue);
+              clearInterval(counter);
+            } else {
+              setCount(Math.ceil(start));
+            }
+          }, 16);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, [targetValue]);
+
   return (
     <div
-      // Absolute positioning & size
-      className="absolute left-[121px] top-[1787px] w-[1664px] h-[583px] opacity-100
-                 rounded-[20px_40px_60px_80px] 
-                 bg-gradient-to-r from-[#0F2823] to-[#0C1D18]"
+      ref={cardRef}
+      className={`${bgColor} w-[328px] h-[270px] rounded-[26px] p-6 relative transition-transform duration-300 hover:scale-105 shadow-lg`}
     >
-      {/* Inner container for spacing */}
-      <div className="p-8 h-full flex flex-col">
-        {/* Title */}
-        <h2 className="text-4xl font-bold text-white mb-4">Experience</h2>
-        
-        {/* Description */}
-        <p className="text-white text-lg mb-8 max-w-2xl">
-          With years of experience in the IT industry, we have successfully 
-          delivered cutting-edge software solutions, web and mobile applications, 
-          and enterprise-grade systems. Our expertise spans various technologies, 
-          ensuring innovative, scalable, and secure digital solutions tailored 
-          to your business needs.
-        </p>
+      <span className="text-[56px] font-black">{count}+</span>
+      <div
+        className={`${highlightColor} h-[60px] absolute bottom-0 left-0 right-0 rounded-b-[26px] flex items-center justify-center`}
+      >
+        <span className="text-[24px] font-semibold">{label}</span>
+      </div>
+    </div>
+  );
+};
 
-        {/* Statistics Cards */}
-        <div className="grid grid-cols-3 gap-6">
-          {/* Card 1 */}
-          <div className="flex flex-col items-center justify-center p-6 rounded-lg" 
-               style={{ backgroundColor: '#CDEAC0' }}>
-            <h3 className="text-3xl font-bold">10+</h3>
-            <p className="text-lg font-semibold">Years of Experience</p>
+const ExperienceSection = () => {
+  return (
+    <div className="relative z-10 mx-auto mt-[50px] w-full max-w-[1670px] h-auto opacity-100 px-4 py-8 bg-[#000000]">
+      {/* Main Content Container */}
+      <div className="flex flex-col md:flex-row gap-8 h-full">
+        {/* Left Column - Text & Primary Cards */}
+        <div className="w-full md:w-[45%] flex flex-col">
+          {/* Text Section */}
+          <div className="mb-16">
+            <h1 className="text-[56px] font-black text-[#A3E4C5] leading-none">Experience</h1>
+            <p className="mt-8 text-[20px] text-gray-300 leading-relaxed max-w-[550px]">
+              With years of experience in the IT industry, we have successfully delivered cutting-edge software solutions,
+              web and mobile applications, and enterprise-grade systems. Our expertise spans various technologies, ensuring
+              innovative, scalable, and secure digital solutions tailored to your business needs.
+            </p>
           </div>
-          
-          {/* Card 2 */}
-          <div className="flex flex-col items-center justify-center p-6 rounded-lg"
-               style={{ backgroundColor: '#F9F2D5' }}>
-            <h3 className="text-3xl font-bold">500+</h3>
-            <p className="text-lg font-semibold">Clients</p>
+
+          {/* Primary Cards Column */}
+          <div className="flex flex-col md:flex-row gap-x-8 gap-y-8">
+            <ExperienceCard targetValue={10} label="Years of Experience" bgColor="bg-[#4CAF7A]" highlightColor="bg-[#BFEAD2]" />
+            <ExperienceCard targetValue={500} label="Clients" bgColor="bg-[#E8F3BA]" highlightColor="bg-[#F7FAD9]" />
           </div>
-          
-          {/* Card 3 */}
-          <div className="flex flex-col items-center justify-center p-6 rounded-lg"
-               style={{ backgroundColor: '#FDE2E2' }}>
-            <h3 className="text-3xl font-bold">500+</h3>
-            <p className="text-lg font-semibold">Projects</p>
-          </div>
-          
-          {/* Card 4 */}
-          <div className="flex flex-col items-center justify-center p-6 rounded-lg"
-               style={{ backgroundColor: '#FDE2E2' }}>
-            <h3 className="text-3xl font-bold">500+</h3>
-            <p className="text-lg font-semibold">Deliveries</p>
-          </div>
-          
-          {/* Card 5 */}
-          <div className="flex flex-col items-center justify-center p-6 rounded-lg"
-               style={{ backgroundColor: '#CDEAC0' }}>
-            <h3 className="text-3xl font-bold">20+</h3>
-            <p className="text-lg font-semibold">Countries</p>
-          </div>
-          
-          {/* Card 6 */}
-          <div className="flex flex-col items-center justify-center p-6 rounded-lg"
-               style={{ backgroundColor: '#F9F2D5' }}>
-            <h3 className="text-3xl font-bold">99%</h3>
-            <p className="text-lg font-semibold">Client Satisfaction</p>
-          </div>
+        </div>
+
+        {/* Right Column - Secondary Cards Grid */}
+        <div className="w-full md:w-[55%] grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8">
+          <ExperienceCard targetValue={500} label="Clients" bgColor="bg-[#96E3DC]" highlightColor="bg-[#CDE9E6]" />
+          <ExperienceCard targetValue={20} label="Countries" bgColor="bg-[#A5D1F3]" highlightColor="bg-[#D1E8FB]" />
+          <ExperienceCard targetValue={500} label="Clients" bgColor="bg-[#F5A8B8]" highlightColor="bg-[#FCD6DD]" />
+          <ExperienceCard targetValue={20} label="Countries" bgColor="bg-[#E98E86]" highlightColor="bg-[#F6B9B5]" />
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default ExperienceSection;

@@ -1,4 +1,3 @@
-import React from "react";
 import healthcare from "../assets/healthcare.png"
 import fitness from "../assets/fitness.png"
 import real from "../assets/real.png"
@@ -8,72 +7,158 @@ import entertainment from "../assets/entertainment.png"
 import eweb from "../assets/eweb.png"
 import ewebsite from "../assets/ewebsite.png"
 import arvr from "../assets/arvr.png"
+
 const IndustryVision = () => {
-  const industries = [
-    { name: "Healthcare", img: healthcare },
-    { name: "Fitness", img: fitness },
-    { name: "Real Estate", img: real },
-    { name: "Social Media", img: media },
-    { name: "Education", img: education },
-    { name: "Entertainment", img: entertainment },
-    { name: "E-commerce", img: eweb },
-    { name: "Website", img: ewebsite },
-    { name: "AR/VR", img: arvr },
-
-  ];
-
   return (
-    <div className="bg-[#061611] text-white mx-auto py-12 px-8 w-[1680px]">
+    <div className="bg-[#061611] text-white mx-auto py-12 px-8 w-full max-w-[1680px]">
       {/* Header Section */}
-      <div className="mb-12">
-        <h1 className="text-5xl font-bold leading-tight mb-6">
-          A Seamless Vision that Adapts to<br />
-          Every Industry's Demands
-        </h1>
-        <p className="text-xl text-gray-300 max-w-3xl">
-          We deliver flexible and innovative IT solutions tailored to meet the evolving needs of various industries,
-          ensuring efficiency, scalability, and long-term success.
-        </p>
-      </div>
-
-      <div className="h-px bg-gray-700 w-full my-8" />
-
-      {/* Content Section */}
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center">
-        {/* Left Text */}
-        <div className="flex-1 mb-8 lg:mb-0">
-          <h2 className="text-4xl font-semibold mb-4">
-            Fuel Success in a Digital-First World with<br />
-            <span className="text-[#8CBEB7]">300+ Visionaries.</span>
-          </h2>
-          <button className="bg-[#8CBEB7] text-[#061611] px-8 py-4 rounded-full 
-            text-xl hover:bg-[#7dad9f] transition-colors flex items-center gap-3">
-            Let's Innovate Together
-            <i className="fas fa-arrow-right text-xl"></i>
-          </button>
+      <div className="flex flex-col md:flex-row justify-between gap-8">
+        {/* Left side - Title */}
+        <div className="md:w-1/2">
+          <h1 className="text-5xl font-extrabold text-48 leading-tight text-[#8CBEB7] w-[683]">
+            A Seamless Vision that Adapts to Every Industry's Demands
+          </h1>
+          <p className="w-[725] h-[102] font-Montserrat font-bold text-20 text-[#ffffff] mt-10">We deliver flexible and innovative IT solutions tailored to meet the evolving needs of various industries, ensuring efficiency, scalability, and long-term success.</p>
         </div>
 
-        {/* Industry Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full lg:w-[50%]">
-          {industries.map((industry, index) => (
-            <div
-              key={index}
-              className="relative group overflow-hidden rounded-lg"
-            >
-              <img
-                src={industry.img}
-                alt={industry.name}
-                className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <p className="text-white font-medium text-lg">{industry.name}</p>
-              </div>
+        {/* Right side - Grid layout */}
+        <div className="md:w-1/2 grid grid-cols-3 gap-4 h-full">
+          {/* First column - Large Healthcare card */}
+          <div className="col-span-1 row-span-3 relative group overflow-hidden rounded-lg h-full">
+            <img
+              src={healthcare || "/placeholder.svg"}
+              alt="Healthcare"
+              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p className="text-white font-medium text-lg">Healthcare</p>
             </div>
-          ))}
+          </div>
+
+          {/* Top row - 3 cards */}
+          <div className="relative group overflow-hidden rounded-lg">
+            <img
+              src={fitness || "/placeholder.svg"}
+              alt="Fitness"
+              className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p className="text-white font-medium text-lg">Fitness</p>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg">
+            <img
+              src={real || "/placeholder.svg"}
+              alt="Real Estate"
+              className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p className="text-white font-medium text-lg">Real Estate</p>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg">
+            <img
+              src={media || "/placeholder.svg"}
+              alt="Social Media"
+              className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p className="text-white font-medium text-lg">Social Media</p>
+            </div>
+          </div>
+
+          {/* Middle row - 2 cards spanning 1.5 columns each */}
+          <div className="col-span-1.5 relative group overflow-hidden rounded-lg">
+            <img
+              src={education || "/placeholder.svg"}
+              alt="Education"
+              className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p className="text-white font-medium text-lg">Education</p>
+            </div>
+          </div>
+          <div className="col-span-1.5 relative group overflow-hidden rounded-lg">
+            <img
+              src={entertainment || "/placeholder.svg"}
+              alt="Entertainment"
+              className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p className="text-white font-medium text-lg">Entertainment</p>
+            </div>
+          </div>
+
+          {/* Bottom row - 3 cards */}
+          <div className="relative group overflow-hidden rounded-lg">
+            <img
+              src={eweb || "/placeholder.svg"}
+              alt="E-commerce"
+              className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p className="text-white font-medium text-lg">E-commerce</p>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg">
+            <img
+              src={eweb || "/placeholder.svg"}
+              alt="E-commerce"
+              className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p className="text-white font-medium text-lg">E-commerce</p>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg">
+            <img
+              src={ewebsite || "/placeholder.svg"}
+              alt="E-commerce"
+              className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p className="text-white font-medium text-lg">E-commerce</p>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden rounded-lg">
+            <img
+              src={arvr || "/placeholder.svg"}
+              alt="AR/VR"
+              className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p className="text-white font-medium text-lg">AR/VR</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  );
-};
 
-export default IndustryVision;
+      {/* Bottom Section - Call to action */}
+      <div className="mt-[-220px] flex flex-col md:flex-row items-start gap-8">
+  <div className="bg-[#0a211b] rounded-lg p-8 md:w-1/2">
+    <h2 className="text-3xl font-semibold mb-4 mt-[-20px]"> {/* Adjust the mt value as needed */}
+      Fuel Success in a Digital-First World with <span className="text-[#8CBEB7]">300+</span> Visionaries.
+    </h2>
+    <div className="bg-white rounded-lg p-6 inline-block mt-4">
+      <button className="text-[#0a6e58] font-medium text-xl flex items-center gap-3">
+        Let's Innovate Together
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="">
+          <path
+            d="M13 5L20 12L13 19"
+            stroke="#0a6e58"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path d="M4 12H20" stroke="#0a6e58" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+    </div>
+  )
+}
+
+export default IndustryVision
+
