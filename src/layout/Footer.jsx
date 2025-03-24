@@ -4,7 +4,11 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Rectangle114 from "../assets/Rectangle 114.png";
 import Rectangle191 from "../assets/Rectangle 191.png";
 import LOGO from "../assets/LOGO011 3.png";
-
+import Facebook from "../assets/Facebook.png"
+import Instagram from "../assets/Instagram.png"
+import LinkedIN from "../assets/LinkedIN.png"
+import Twitter from "../assets/Twitter.png"
+import Location from "../assets/Location.png"
 const Footer = () => {
   return (
     <footer className="relative text-white py-12 px-6 md:px-20">
@@ -93,8 +97,8 @@ const Footer = () => {
                 { date: 15, image: Rectangle191 },
                 { date: 20, image: Rectangle191 }
               ].map((blog, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="bg-white text-black w-full rounded-[10px] shadow-md flex flex-col items-center p-3"
                 >
                   <img src={blog.image} alt="Blog" className="w-[150px] h-[90px] rounded-[10px] object-cover" />
@@ -107,7 +111,7 @@ const Footer = () => {
         </div>
 
         <hr className="border-gray-500 my-8" />
-        
+
         <div
           className="relative text-white py-6 px-6 md:px-20 rounded-lg bg-cover bg-center bg-no-repeat opacity-100 text-6xl font-semibold"
           style={{
@@ -121,8 +125,8 @@ const Footer = () => {
             {/* Address and Contact */}
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
               <p className="flex items-center space-x-2 text-white font-semibold text-[18px] opacity-100 leading-[29px]">
-                <span>📍</span>
-                <span>F - 268, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar, Punjab 160071</span>
+              <img src={Location} alt="Location Icon" className="w-6 h-6" />
+                <span>F - 268, Industrial Area, Sector 74, Sahibzada <br /> Ajit Singh Nagar, Punjab 160071</span>
               </p>
               <p className="flex items-center space-x-2 text-white font-semibold text-[18px] opacity-100 leading-[29px]">
                 <span>✉️</span>
@@ -135,18 +139,18 @@ const Footer = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="flex space-x-3 text-lg mt-4 align-items-center justify-center text-align-center opacity-100">
-              <a href="#" className="w-[30px] h-[30px] flex items-center justify-center rounded-lg bg-[#ffffff] opacity-100">
-                <FaFacebookF />
+            <div className="flex space-x-2 text-lg mt-4 items-center justify-center opacity-100">
+              <a href="#" className="w-[30px] h-[30px] flex items-center justify-center rounded-lg  opacity-100">
+                <img src={Facebook} alt="Facebook" className="w-full h-full object-contain" />
               </a>
-              <a href="#" className="w-[30px] h-[30px] flex items-center justify-center rounded-lg bg-[#ffffff] opacity-100">
-                <FaInstagram />
+              <a href="#" className="w-[30px] h-[30px] flex items-center justify-center rounded-lg  opacity-100">
+                <img src={Instagram} alt="Instagram" className="w-full h-full object-contain" />
               </a>
-              <a href="#" className="w-[30px] h-[30px] flex items-center justify-center rounded-lg bg-[#ffffff] opacity-100">
-                <FaLinkedinIn />
+              <a href="https://www.linkedin.com/company/tech-devise/posts/?feedView=all" className="w-[30px] h-[30px] flex items-center justify-center rounded-lg  opacity-100">
+                <img src={LinkedIN} alt="LinkedIn" className="w-full h-full object-contain" />
               </a>
-              <a href="#" className="w-[30px] h-[30px] flex items-center justify-center rounded-lg bg-[#ffffff] opacity-100">
-                X
+              <a href="#" className="w-[30px] h-[30px] flex items-center justify-center rounded-lg  opacity-100">
+                <img src={Twitter} alt="Twitter" className="w-full h-full object-contain" />
               </a>
             </div>
           </div>

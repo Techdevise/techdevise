@@ -1,66 +1,124 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from '../components/Button';
-// import { Button } from "../../components/ui/button"; 
-// import { Menu } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [servicesDropdown, setServicesDropdown] = useState(false);
+  const [blogDropdown, setBlogDropdown] = useState(false);
+  const [isSticky, setIsSticky] = useState({ services: false, blog: false });
+
+  const handleServicesHover = (state) => {
+    if (!isSticky.services) setServicesDropdown(state);
+  };
+
+  const handleBlogHover = (state) => {
+    if (!isSticky.blog) setBlogDropdown(state);
+  };
+
+  const toggleSticky = (dropdown) => {
+    setIsSticky(prev => ({
+      ...prev,
+      [dropdown]: !prev[dropdown],
+      ...(dropdown === 'services' && { blog: false }),
+      ...(dropdown === 'blog' && { services: false })
+    }));
+
+    if (dropdown === 'services') {
+      setServicesDropdown(prev => !prev);
+      setBlogDropdown(false);
+    }
+    if (dropdown === 'blog') {
+      setBlogDropdown(prev => !prev);
+      setServicesDropdown(false);
+    }
+  };
 
   return (
     <nav className="absolute left-[120px] top-[33px] w-[1680px] h-[82px] text-white py-4 px-6 flex justify-between items-center bg-cover bg-center opacity-100"
-    style={{ backgroundImage: "url('')" }}
-  >
-     <div className="flex items-center w-[190.52px] h-[90px] opacity-100">
-     <img alt="Tech Devise Logo" className="w-[179.52px] h-[56px] opacity-100 mr-2" src="/LOGO011 3.png" />
-
-  <span className="text-2xl font-bold"></span>
-</div>
+      style={{ backgroundImage: "url('')" }}
+    >
+      <div className="flex items-center w-[190.52px] h-[90px] opacity-100">
+        <img alt="Tech Devise Logo" className="w-[179.52px] h-[56px] opacity-100 mr-2" src="/LOGO011 3.png" />
+        <span className="text-2xl font-bold"></span>
+      </div>
 
       {/* Navigation Links */}
       <div className="hidden md:flex space-x-6 text-lg w-[762px] h-[24px] opacity-100">
         <Link to="/" className="w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300">Home</Link>
-        <div className="relative group">
-          <button className="whitespace-nowrapw-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300hover:text-gray-300">Services <span className="text-[12px]">▼</span></button>
-          <div className="absolute left-0 mt-2 w-40 bg-white text-black shadow-lg rounded-md hidden group-hover:block">
-            <Link to="/services/web" className="block px-4 py-2 hover:bg-gray-200">Web Development</Link>
-            <Link to="/services/seo" className="block px-4 py-2 hover:bg-gray-200">SEO</Link>
+
+        {/* Services Dropdown */}
+        <div 
+          className="relative group"
+          onMouseEnter={() => handleServicesHover(true)}
+          onMouseLeave={() => handleServicesHover(false)}
+        >
+          <button 
+            onClick={() => toggleSticky('services')}
+            className="whitespace-nowrap w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300"
+          >
+            Services <span className="text-[10px]">▼</span>
+          </button>
+          <div 
+            className={`absolute left-0 mt-2 w-47 bg-white text-black shadow-lg rounded-md transition-all duration-300 ${
+              (servicesDropdown || isSticky.services) 
+                ? 'opacity-100 visible translate-y-0' 
+                : 'opacity-0 invisible -translate-y-2'
+            }`}
+          >
+            <Link 
+              to="/services/web" 
+              className="block px-4 py-2 hover:bg-gray-200 whitespace-nowrap"
+            >
+              Web Development
+            </Link>
+            <Link 
+              to="/services/seo" 
+              className="block px-4 py-2 hover:bg-gray-200"
+            >
+              SEO
+            </Link>
           </div>
         </div>
+
         <Link to="/portfolio" className="w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300">Portfolio</Link>
-        <div className="relative group">
-    <Link to="/blog" className="w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300 mr-1">
-        Blog
+
+       {/* Blog Dropdown */}
+<div 
+  className="relative group"
+  onMouseEnter={() => handleBlogHover(true)}
+  onMouseLeave={() => handleBlogHover(false)}
+>
+  <Link 
+    to="/blog" // Redirects to the blog page
+    className="whitespace-nowrap w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300"
+  >
+    Blog <span className="text-[10px]">▼</span>
+  </Link>
+  <div 
+    className={`absolute left-0 mt-2 w-40 bg-white text-black shadow-lg rounded-md transition-all duration-300 ${
+      (blogDropdown || isSticky.blog) 
+        ? 'opacity-100 visible translate-y-0' 
+        : 'opacity-0 invisible -translate-y-2'
+    }`}
+  >
+    <Link 
+      to="/blog/blog-details" 
+      className="block px-4 py-2 hover:bg-gray-200"
+    >
+      Blog Details
     </Link>
-    <div className="absolute left-0 mt-2 w-40 bg-white text-black shadow-lg rounded-md hidden group-hover:block group-focus:block">
-        <Link to="/blog/blog-details" className="block px-4 py-2 hover:bg-gray-200">
-            Blog Details
-        </Link>
-    </div>
+  </div>
 </div>
+
         <Link to="/about" className="w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300">About Us</Link>
         <Link to="/contact" className="whitespace-nowrap w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300">Contact Us</Link>
       </div>
-          {/* Get in Touch Button */}
-      <div className="ml-[-670px]"> 
-        <Button />
-      </div>
-    
-      
-    
-      
 
       {/* Get in Touch Button */}
-      {/* <Button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg hidden md:block">
-        Get in Touch
-      </Button> */}
-
-      {/* Mobile Menu */}
-      {/* <div className="md:hidden">
-        <button onClick={() => setIsOpen(!isOpen)}>
-          <Menu size={28} />
-        </button>
-      </div> */}
+      <div className="ml-[-640px]"> 
+        <Button />
+      </div>
 
       {/* Mobile Dropdown */}
       {isOpen && (
@@ -71,10 +129,9 @@ const Navbar = () => {
           <Link to="/blog" className="block">Blog</Link>
           <Link to="/about" className="block">About Us</Link>
           <Link to="/contact" className="block">Contact Us</Link>
-          {/* <Button className="w-full bg-green-500 hover:bg-green-600">Get in Touch</Button> */}
           <div className="flex justify-center items-center h-screen">
-      <Button />
-    </div>
+            <Button />
+          </div>
         </div>
       )}
     </nav>
@@ -82,4 +139,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

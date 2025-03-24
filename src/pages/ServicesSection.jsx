@@ -78,8 +78,7 @@ const ServicesSection = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className={`relative ${service.bgColor} p-4 md:p-6 shadow-md ${
-              [
+            className={`relative ${service.bgColor} p-4 md:p-6 shadow-md ${[
                 "rounded-tl-3xl rounded-br-3xl",
                 "rounded-tr-3xl rounded-bl-3xl",
                 "rounded-2xl",
@@ -87,7 +86,7 @@ const ServicesSection = () => {
                 "rounded-tr-3xl rounded-bl-3xl",
                 "rounded-2xl",
               ][index % 6]
-            } w-full max-w-[400px] mx-auto h-[250px] md:h-[300px]`}
+              } w-full max-w-[400px] mx-auto h-[250px] md:h-[300px]`}
           >
             <h2 className="text-xl md:text-2xl font-bold mb-2 text-[#000]">
               {service.title}

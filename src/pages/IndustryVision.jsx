@@ -23,7 +23,6 @@ const IndustryVision = () => {
 
         {/* Right side - Grid layout */}
         <div className="md:w-1/2 grid grid-cols-3 gap-4 h-full">
-          {/* First column - Large Healthcare card */}
           <div className="col-span-1 row-span-3 relative group overflow-hidden rounded-lg h-full">
             <img
               src={healthcare || "/placeholder.svg"}
@@ -35,7 +34,6 @@ const IndustryVision = () => {
             </div>
           </div>
 
-          {/* Top row - 3 cards */}
           <div className="relative group overflow-hidden rounded-lg">
             <img
               src={fitness || "/placeholder.svg"}
@@ -48,7 +46,7 @@ const IndustryVision = () => {
           </div>
           <div className="relative group overflow-hidden rounded-lg">
             <img
-              src={real || "/placeholder.svg"}
+              src={eweb || "/placeholder.svg"}
               alt="Real Estate"
               className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform"
             />
@@ -58,7 +56,7 @@ const IndustryVision = () => {
           </div>
           <div className="relative group overflow-hidden rounded-lg">
             <img
-              src={media || "/placeholder.svg"}
+              src={eweb || "/placeholder.svg"}
               alt="Social Media"
               className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform"
             />
@@ -67,10 +65,9 @@ const IndustryVision = () => {
             </div>
           </div>
 
-          {/* Middle row - 2 cards spanning 1.5 columns each */}
           <div className="col-span-1.5 relative group overflow-hidden rounded-lg">
             <img
-              src={education || "/placeholder.svg"}
+              src={eweb || "/placeholder.svg"}
               alt="Education"
               className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform"
             />
@@ -80,7 +77,7 @@ const IndustryVision = () => {
           </div>
           <div className="col-span-1.5 relative group overflow-hidden rounded-lg">
             <img
-              src={entertainment || "/placeholder.svg"}
+              src={eweb || "/placeholder.svg"}
               alt="Entertainment"
               className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform"
             />
@@ -88,8 +85,6 @@ const IndustryVision = () => {
               <p className="text-white font-medium text-lg">Entertainment</p>
             </div>
           </div>
-
-          {/* Bottom row - 3 cards */}
           <div className="relative group overflow-hidden rounded-lg">
             <img
               src={eweb || "/placeholder.svg"}
@@ -112,7 +107,7 @@ const IndustryVision = () => {
           </div>
           <div className="relative group overflow-hidden rounded-lg">
             <img
-              src={ewebsite || "/placeholder.svg"}
+              src={eweb || "/placeholder.svg"}
               alt="E-commerce"
               className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform"
             />
@@ -122,7 +117,7 @@ const IndustryVision = () => {
           </div>
           <div className="relative group overflow-hidden rounded-lg">
             <img
-              src={arvr || "/placeholder.svg"}
+              src={eweb || "/placeholder.svg"}
               alt="AR/VR"
               className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform"
             />
@@ -133,10 +128,9 @@ const IndustryVision = () => {
         </div>
       </div>
 
-      {/* Bottom Section - Call to action */}
       <div className="mt-[-220px] flex flex-col md:flex-row items-start gap-8">
   <div className="bg-[#0a211b] rounded-lg p-8 md:w-1/2">
-    <h2 className="text-3xl font-semibold mb-4 mt-[-20px]"> {/* Adjust the mt value as needed */}
+    <h2 className="text-3xl font-semibold mb-4 mt-[-20px]"> 
       Fuel Success in a Digital-First World with <span className="text-[#8CBEB7]">300+</span> Visionaries.
     </h2>
     <div className="bg-white rounded-lg p-6 inline-block mt-4">

@@ -1,12 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
+import TouchModal from "./TouchModal";
 
 const Button = () => {
-    return (
-      <button className="w-[156px] h-[52px] bg-white border border-green-700 text-[#157B6C] text-lg font-bold rounded-md shadow-md hover:text-white hover:bg-[#157B6C] transition-all">
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  return (
+    <>
+      <button
+        onClick={() => setIsModalOpen(true)}
+        className="w-[172px] h-[56px] bg-white border-2 border-green-700 text-green-700 text-lg font-bold rounded-xl shadow-md hover:text-white hover:bg-green-700 transition-all duration-300 hover:scale-105"
+      >
         Get in Touch
       </button>
-    );
-  };
-  
-  export default Button;
-  
+
+      {isModalOpen && <TouchModal onClose={() => setIsModalOpen(false)} />}
+    </>
+  );
+};
+
+export default Button;
+
