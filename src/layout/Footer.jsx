@@ -11,10 +11,10 @@ import Twitter from "../assets/Twitter.png"
 import Location from "../assets/Location.png"
 const Footer = () => {
   return (
-    <footer className="relative text-white py-12 px-6 md:px-20">
+    <footer className="relative text-white py-12 px-6 md:px-20 mt-[-80px]">
       {/* Background Image */}
       <div
-        className="absolute inset-0 z-0 rounded-t-[60px]"
+        className="absolute inset-0 z-0 rounded-t-[90px]"
         style={{
           backgroundImage: `url(${Rectangle114})`,
           backgroundSize: "cover",
@@ -61,7 +61,7 @@ const Footer = () => {
             <p className="text-white opacity-100 space-y-2 text-[18px] font-normal leading-[27px] font-montserrat">
               Tech Devise is a digital solution provider which offers various digital services that will help your online business to flourish. We expertise in providing services like digital marketing, app development, web development, CMS development and many more.
             </p>
-            <button className="mt-4 w-[183px] h-[49px] rounded-lg bg-white font-bold text-[16px] text-[#137365] px-10 py-2">
+            <button className="whitespace-nowrap mt-4 w-[183px] h-[49px] rounded-lg bg-white font-bold text-[16px] text-[#137365] px-10 py-2">
               Contact Now!
             </button>
           </div>
@@ -81,7 +81,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-3 text-white font-montserrat">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-3 text-white text-[18] font-montserrat">Quick Links</h3>
             <ul className="text-white opacity-100 space-y-2 text-[18px] font-normal leading-[27px] font-montserrat">
               <li><Link to="/about">About TechDevise</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
@@ -91,23 +91,24 @@ const Footer = () => {
 
           {/* Recent Blogs */}
           <div>
-            <h3 className="text-lg font-semibold mb-3 text-white">Recent Blogs</h3>
-            <div className="flex flex-col space-y-4">
-              {[
-                { date: 15, image: Rectangle191 },
-                { date: 20, image: Rectangle191 }
-              ].map((blog, index) => (
-                <div
-                  key={index}
-                  className="bg-white text-black w-full rounded-[10px] shadow-md flex flex-col items-center p-3"
-                >
-                  <img src={blog.image} alt="Blog" className="w-[150px] h-[90px] rounded-[10px] object-cover" />
-                  <p className="text-sm font-semibold text-center mt-2">Crafting Seamless User Experiences</p>
-                  <span className="bg-[#20856f] text-white text-sm px-3 py-1 rounded-md mt-2">{blog.date} Feb</span>
-                </div>
-              ))}
-            </div>
-          </div>
+  <h3 className="text-lg font-bold mb-3 text-white text-[18] font-montserrat">Recent Blogs</h3>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {[
+      { date: 15, image: Rectangle191 },
+      { date: 20, image: Rectangle191 }
+    ].map((blog, index) => (
+      <div
+        key={index}
+        className="bg-white text-black w-full rounded-[10px] shadow-md flex flex-col items-center p-3"
+      >
+        <img src={blog.image} alt="Blog" className="w-full h-[120px] rounded-[10px] object-cover" />
+        <p className="text-sm font-semibold text-center mt-2">Crafting Seamless User Experiences</p>
+        <span className="bg-[#20856f] text-white text-sm px-3 py-1 rounded-md mt-2">{blog.date} Feb</span>
+      </div>
+    ))}
+  </div>
+</div>
+
         </div>
 
         <hr className="border-gray-500 my-8" />
@@ -139,7 +140,7 @@ const Footer = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="flex space-x-2 text-lg mt-4 items-center justify-center opacity-100">
+            <div className="flex space-x-3 text-lg mt-4 items-center justify-center opacity-100">
               <a href="#" className="w-[30px] h-[30px] flex items-center justify-center rounded-lg  opacity-100">
                 <img src={Facebook} alt="Facebook" className="w-full h-full object-contain" />
               </a>

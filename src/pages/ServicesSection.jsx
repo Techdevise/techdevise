@@ -1,4 +1,7 @@
-import React from "react";
+import React from "react"
+// import Image from "next/image"
+import { ArrowUpRight } from 'lucide-react'
+import ServiceCard from "./ServiceCard"; 
 import web from "../assets/web.png"
 import ecommerce from "../assets/ecommerce.png"
 import digital from "../assets/digital.png"
@@ -6,110 +9,113 @@ import quality from "../assets/quality.png"
 import mobile from "../assets/mobile.png"
 import uiux from "../assets/uiux.png"
 
-const services = [
-  {
-    title: "Website Development",
-    description:
-      "Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow.",
-    imgSrc: web,
-    bgColor: "bg-[#8CD790]",
-  },
-  {
-    title: "E-Commerce Development",
-    description:
-      "Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow.",
-    imgSrc: ecommerce,
-    bgColor: "bg-[#77D7E5]",
-  },
-  {
-    title: "Digital Marketing",
-    description:
-      "Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow.",
-    imgSrc: digital,
-    bgColor: "bg-[#F7DC6F]",
-  },
-  {
-    title: "Quality Analysis",
-    description:
-      "Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow.",
-    imgSrc: quality,
-    bgColor: "bg-[#A9CCE3]",
-  },
-  {
-    title: "Mobile Application Development",
-    description:
-      "Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow.",
-    imgSrc: mobile,
-    bgColor: "bg-[#F1948A]",
-  },
-  {
-    title: "UI/UX Design",
-    description:
-      "Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow.",
-    imgSrc: uiux,
-    bgColor: "bg-[#F5B7B1]",
-  },
-];
 
-const ServicesSection = () => {
+
+export default function ServicesSection() {
   return (
-    <div
-      className="container mx-auto p-4 xl:p-6"
-      style={{
-        borderRadius: "30px 10px 30px 10px",
-        backgroundColor: "#0F261E",
-      }}
-    >
-      {/* Header Section */}
-      <div className="relative w-full max-w-[810px] mx-auto rounded-[26px] text-center mb-8 mt-6 md:mt-12 p-4 md:p-8 border-2 border-[#F7DC6F]">
-        <h1 className="text-3xl md:text-4xl font-bold text-[#8BBEB6] mb-4">
-          Our Services
-        </h1>
-        <p className="text-sm md:text-lg text-[#FFFFFF] mx-auto">
-          At Tech Devise, we provide cutting-edge IT solutions designed to drive
-          innovation, efficiency, and security for businesses of all sizes. Our
-          expertise spans across multiple domains, ensuring that your technology
-          needs are met with precision and excellence.
-        </p>
-      </div>
+    <div className="w-[1680px] h-[985px] p-6 bg-[#061611] ml-[-100px]">
+      {/* Services Header */}
+      <div className="w-[810px] h-[229px] mx-auto text-center mb-8 border border-[#529D92] rounded-[26px] opacity-100">
+  <h2  style={{
+                        display: 'inline-table',
+                        background: "linear-gradient(to right, #e0e0e0, #157B6C)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        backgroundClip: "text",
+                        textFillColor: "transparent",
+                        color: "#157B6C",
+                    }} className="text-5xl font-bold text-white mt-[40px]">
+    Our <span className="text-emerald-400">Services</span>
+  </h2>
+  <p className="text-gray-300 max-w-2xl mx-auto mt-4">
+    At Tech Devise, we provide cutting-edge IT solutions designed to drive
+    innovation, efficiency, and security for businesses of all sizes. Our
+    expertise spans across multiple domains, ensuring that your technology
+    needs are met with precision and excellence.
+  </p>
+</div>
+      {/* Top Row */}
+      <div className="flex gap-6 mb-6 mt-[-250px]">
+        <ServiceCard 
+          title="Website Development"
+          description="Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow."
+          bgColor="bg-emerald-400"
+          style={{ width: '200px', height: '200px', margin: '0 auto' }}
+          imagePath={web}
+        />
+        
+        <div className="w-[810px] h-[229px] bg-emerald-200 text-black rounded-3xl overflow-hidden flex shadow-lg mt-[250px]">
+        {/* Text Content */}
+        <div className="w-1/2 p-8">
+          <h3 className="text-2xl font-bold">E-commerce Website</h3>
+          <p className="mt-2 text-gray-800">
+            Enhance your brand's presence with our creative digital marketing
+            tools! Engage your audience and see your business grow.
+          </p>
+          <button className="flex items-center mt-4 font-semibold text-black">
+            More information
+            <span className="ml-2 bg-white rounded-full p-1">
+              <ArrowUpRight className="w-4 h-4" />
+            </span>
+          </button>
+        </div>
 
-      {/* Services Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 px-4 sm:px-0">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className={`relative ${service.bgColor} p-4 md:p-6 shadow-md ${[
-                "rounded-tl-3xl rounded-br-3xl",
-                "rounded-tr-3xl rounded-bl-3xl",
-                "rounded-2xl",
-                "rounded-tl-3xl rounded-br-3xl",
-                "rounded-tr-3xl rounded-bl-3xl",
-                "rounded-2xl",
-              ][index % 6]
-              } w-full max-w-[400px] mx-auto h-[250px] md:h-[300px]`}
-          >
-            <h2 className="text-xl md:text-2xl font-bold mb-2 text-[#000]">
-              {service.title}
-            </h2>
-            <p className="text-sm md:text-base text-[#000] mb-4">
-              {service.description}
-            </p>
-            <a
-              href="#"
-              className="text-[#000] text-sm md:text-base font-semibold inline-flex items-center"
-            >
-              More information ➔
-            </a>
-            <img
-              src={service.imgSrc}
-              alt={service.title}
-              className="absolute bottom-0 right-0 w-24 h-24 md:w-36 md:h-36 object-contain"
-            />
-          </div>
-        ))}
+        {/* Image Section */}
+        <div className="w-1/2 flex items-center justify-center bg-emerald-300">
+          <img
+            src={ecommerce}
+            alt="E-commerce Illustration"
+            style={{ width: '200px', height: '200px', margin: '0 auto' }}
+          />
+        </div>
+        </div>
+        
+        <ServiceCard 
+          title="Digital Marketing"
+          description="Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow."
+          bgColor="bg-yellow-200"
+          style={{ width: '200px', height: '200px', margin: '0 auto' }}
+          imagePath={digital}
+        />
+      </div>
+      
+      {/* Middle Row */}
+      {/* <div className="flex gap-6 mb-6">
+        <ServiceCard 
+          title="E-commerce Website"
+          description="Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow."
+          bgColor="bg-teal-300"
+          imagePath="/ecommerce.svg"
+          fullWidth={true}
+        />
+      </div>
+       */}
+      {/* Bottom Row */}
+      <div className="flex gap-6">
+        <ServiceCard 
+          title="Quality Analysis"
+          description="Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow."
+          bgColor="bg-blue-200"
+          style={{ width: '200px', height: '200px', margin: '0 auto' }}
+          imagePath={quality}
+        />
+        
+        <ServiceCard 
+          title="Mobile Application development"
+          description="Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow."
+          bgColor="bg-pink-400"
+          style={{ width: '200px', height: '200px', margin: '0 auto' }}
+          imagePath={mobile}
+        />
+        
+        <ServiceCard 
+          title="UI/UX Design"
+          description="Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow."
+          bgColor="bg-red-300"
+          style={{ width: '200px', height: '200px', margin: '0 auto' }}
+          imagePath={uiux}
+        />
       </div>
     </div>
-  );
-};
-
-export default ServicesSection;
+  )
+}

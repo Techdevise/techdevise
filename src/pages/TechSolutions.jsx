@@ -5,16 +5,26 @@ import javascriptlogo from "../assets/javascriptlogo.png"
 import htmllogo from "../assets/htmllogo.png"
 import csslogo from "../assets/csslogo.png"
 import phplogo from "../assets/phplogo.png"
+import Maskgroup from "../assets/Maskgroup.png"
+
 
 
 const TechSolutions = () => {
   return (
     <div
-      className="bg-[#000000] border-2 p-6 rounded-[26px] border border-[#529D92] w-[1680px] h-[500px] z-20 relative ml-[110px] mt-[150px]">
+      className=" border-2 p-6 rounded-[26px] border border-[#529D92] w-[1680px] h-[500px] z-20 relative ml-[110px] mt-[150px] bg-no-repeat bg-center bg-cover" style={{ backgroundImage: `url(${Maskgroup})` }}>
       <div className="flex flex-col md:flex-row justify-between items-center h-full">
         {/* Left Column */}
         <div className="md:w-1/3">
-          <h1 className="text-4xl font-extrabold font-montserrat text-[#8DBFB7] opacity-100 w-[613px] transform -translate-y-8">
+          <h1  style={{
+                        display: 'inline-table',
+                        background: "linear-gradient(to right, #e0e0e0, #157B6C)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        backgroundClip: "text",
+                        textFillColor: "transparent",
+                        color: "#157B6C",
+                    }} className="text-4xl font-extrabold font-montserrat text-[#8DBFB7] opacity-100 w-[613px] transform -translate-y-8">
             Innovative Technology <br /> Solutions
           </h1>
           <ul className="mt-6 space-y-4">

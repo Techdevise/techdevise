@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ['Montserrat', 'Archivo', 'sans-serif'],
+        montserrat: ['Montserrat'],
       },
       screens: {
         'xs': '475px', 

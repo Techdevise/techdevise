@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from '../components/Button';
+import techdeviselogo from '../assets/techdeviselogo.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +40,7 @@ const Navbar = () => {
       style={{ backgroundImage: "url('')" }}
     >
       <div className="flex items-center w-[190.52px] h-[90px] opacity-100">
-        <img alt="Tech Devise Logo" className="w-[179.52px] h-[56px] opacity-100 mr-2" src="/LOGO011 3.png" />
+        <img alt="Tech Devise Logo" className="w-[179.52px] h-[56px] opacity-100 mr-2" src={techdeviselogo} />
         <span className="text-2xl font-bold"></span>
       </div>
 
@@ -111,7 +112,7 @@ const Navbar = () => {
   </div>
 </div>
 
-        <Link to="/about" className="w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300">About Us</Link>
+        <Link to="/about" className="whitespace-nowrap w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300">About Us</Link>
         <Link to="/contact" className="whitespace-nowrap w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300">Contact Us</Link>
       </div>
 
@@ -135,6 +136,7 @@ const Navbar = () => {
         </div>
       )}
     </nav>
+    
   );
 };
 

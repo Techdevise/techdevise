@@ -68,7 +68,15 @@ const Testimonials = () => {
     <div className="w-[1680px] h-[504px] ml-[110px] ">
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
-        <h2 className="text-5xl font-bold mb-16 text-[#c5e4d9]">
+        <h2  style={{
+                        display: 'inline-table',
+                        background: "linear-gradient(to right, #e0e0e0, #157B6C)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        backgroundClip: "text",
+                        textFillColor: "transparent",
+                        color: "#157B6C",
+                    }} className="text-6xl font-bold mb-16 text-[#c5e4d9]">
           What our customers say
           <br />
           about us
@@ -105,7 +113,7 @@ const Testimonials = () => {
           </div>
 
           {/* Main testimonial */}
-          <div className="flex-1 bg-[#0a2a1e] rounded-lg p-8 flex flex-col md:flex-row gap-8 border border-[#0d6e52]">
+          <div className="flex-1 bg-[#0a2a1e] rounded-lg p-8 flex flex-col md:flex-row gap-8">
             {/* User Image */}
             <div className="md:w-1/4">
               <div className="relative rounded-lg overflow-hidden">

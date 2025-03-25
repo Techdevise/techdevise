@@ -15,4 +15,9 @@
     animation: scroll 20s linear infinite !important;
   }
 
+  body {
+    font-family: 'Montserrat';
+  }
+  
+
   

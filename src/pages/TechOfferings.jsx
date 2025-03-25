@@ -85,7 +85,15 @@ const TechOfferings = () => {
   return (
     <div className="w-full max-w-[1920px] mx-auto text-white p-8 rounded-lg rounded-3xl overflow-hidden">
       <div className="w-full max-w-[1167px] mb-8 ml-[90px]">
-        <h2 className="text-[#B4F1E8] text-[48px] font-extrabold font-montserrat">
+        <h2  style={{
+                        display: 'inline-table',
+                        background: "linear-gradient(to right, #e0e0e0, #157B6C)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        backgroundClip: "text",
+                        textFillColor: "transparent",
+                        color: "#157B6C",
+                    }} className="text-[#B4F1E8] text-[48px] font-extrabold font-montserrat">
           Our Tech Offerings - Tailored to{" "}
           <span className="text-green-400">Your Time</span> Zone and Business
           Needs

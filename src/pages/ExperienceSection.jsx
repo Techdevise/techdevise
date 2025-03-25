@@ -54,14 +54,22 @@ const ExperienceCard = ({ targetValue, label, bgColor, highlightColor }) => {
 
 const ExperienceSection = () => {
   return (
-    <div className="relative z-10 mx-auto mt-[50px] w-full max-w-[1670px] h-auto opacity-100 px-4 py-8 bg-[#000000]">
+    <div className="relative z-10 mx-auto mt-[50px] w-full max-w-[1670px] h-auto opacity-100 px-4 py-8">
       {/* Main Content Container */}
       <div className="flex flex-col md:flex-row gap-8 h-full">
         {/* Left Column - Text & Primary Cards */}
         <div className="w-full md:w-[45%] flex flex-col">
           {/* Text Section */}
           <div className="mb-16">
-            <h1 className="text-[56px] font-black text-[#A3E4C5] leading-none">Experience</h1>
+            <h1  style={{
+                        display: 'inline-table',
+                        background: "linear-gradient(to right, #e0e0e0, #157B6C)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        backgroundClip: "text",
+                        textFillColor: "transparent",
+                        color: "#157B6C",
+                    }} className="text-[56px] font-black text-[#A3E4C5] leading-none">Experience</h1>
             <p className="mt-8 text-[20px] text-gray-300 leading-relaxed max-w-[550px]">
               With years of experience in the IT industry, we have successfully delivered cutting-edge software solutions,
               web and mobile applications, and enterprise-grade systems. Our expertise spans various technologies, ensuring

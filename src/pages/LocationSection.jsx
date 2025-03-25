@@ -32,7 +32,15 @@ const LocationSection = () => {
     <div className="max-w-[1680px] h-auto text-white py-20 px-4 md:px-32">
       {/* Header Section */}
       <div className="mb-10">
-        <h2 className="text-[#B5D5D1] text-5xl font-extrabold font-Montserrat mb-6">
+        <h2  style={{
+                        display: 'inline-table',
+                        background: "linear-gradient(to right, #e0e0e0, #157B6C)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        backgroundClip: "text",
+                        textFillColor: "transparent",
+                        color: "#157B6C",
+                    }} className="text-[#B5D5D1] text-6xl font-extrabold font-Montserrat mb-6">
           Location
         </h2>
         <p className="text-xl font-medium text-[#FFFFFF] opacity-100 leading-relaxed">

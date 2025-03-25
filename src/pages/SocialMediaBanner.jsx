@@ -6,7 +6,15 @@ import Arrowlogo from "../assets/Arrowlogo.png"
 const SocialMediaBanner = () => {
   return (
     <div className="w-[1680px] h-[312px] mt-[100px] ml-28 bg-[#062018] flex items-center justify-between px-10 rounded-lg opacity-100">
-      <div className="text-white text-4xl font-semibold">
+      <div  style={{
+                        display: 'inline-table',
+                        background: "linear-gradient(to right, #e0e0e0, #157B6C)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        backgroundClip: "text",
+                        textFillColor: "transparent",
+                        color: "#157B6C",
+                    }} className="text-white text-5xl font-extrabold">
         <span className="text-gray-300">You can</span> <span className="text-green-400">Find</span> <br /> Us on
         <img src={Arrowlogo} alt="Arrologo" className="absolute w-[222px] h-[122px] left-[450px] mt-[-80px]" />
       </div>

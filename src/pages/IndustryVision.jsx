@@ -15,7 +15,15 @@ const IndustryVision = () => {
       <div className="flex flex-col md:flex-row justify-between gap-8">
         {/* Left side - Title */}
         <div className="md:w-1/2">
-          <h1 className="text-5xl font-extrabold text-48 leading-tight text-[#8CBEB7] w-[683]">
+          <h1  style={{
+                        display: 'inline-table',
+                        background: "linear-gradient(to right, #e0e0e0, #157B6C)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        backgroundClip: "text",
+                        textFillColor: "transparent",
+                        color: "#157B6C",
+                    }} className="text-5xl font-extrabold text-48 leading-tight text-[#8CBEB7] w-[683]">
             A Seamless Vision that Adapts to Every Industry's Demands
           </h1>
           <p className="w-[725] h-[102] font-Montserrat font-bold text-20 text-[#ffffff] mt-10">We deliver flexible and innovative IT solutions tailored to meet the evolving needs of various industries, ensuring efficiency, scalability, and long-term success.</p>
