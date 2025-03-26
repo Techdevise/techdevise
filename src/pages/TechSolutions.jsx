@@ -1,10 +1,10 @@
 import React from 'react';
-import reactlogo from "../assets/reactlogo.png";
+import reactlog from "../assets/reactlog.png";
 import vuelogo from "../assets/vuelogo.png"
 import javascriptlogo from "../assets/javascriptlogo.png"
 import htmllogo from "../assets/htmllogo.png"
 import csslogo from "../assets/csslogo.png"
-import phplogo from "../assets/phplogo.png"
+import nextjsicons from "../assets/nextjsicons.png"
 import Maskgroup from "../assets/Maskgroup.png"
 
 
@@ -12,7 +12,7 @@ import Maskgroup from "../assets/Maskgroup.png"
 const TechSolutions = () => {
   return (
     <div
-      className=" border-2 p-6 rounded-[26px] border border-[#529D92] w-[1680px] h-[500px] z-20 relative ml-[110px] mt-[150px] bg-no-repeat bg-center bg-cover" style={{ backgroundImage: `url(${Maskgroup})` }}>
+      className=" border-2 p-6 rounded-[26px] border border-[#2d4642] w-[1680px] h-[500px] z-20 relative ml-[110px] mt-[150px] bg-no-repeat bg-center bg-cover" style={{ backgroundImage: `url(${Maskgroup})` }}>
       <div className="flex flex-col md:flex-row justify-between items-center h-full">
         {/* Left Column */}
         <div className="md:w-1/3">
@@ -27,8 +27,8 @@ const TechSolutions = () => {
                     }} className="text-4xl font-extrabold font-montserrat text-[#8DBFB7] opacity-100 w-[613px] transform -translate-y-8">
             Innovative Technology <br /> Solutions
           </h1>
-          <ul className="mt-6 space-y-4">
-            <li className="text-green-400">
+          <ul className="mt-6 space-y-4 w-97 h-27 font-Montserrat font-bold text-20">
+            <li className="text-[#157B6C]">
               Frontend
               <i className="fas fa-arrow-right"></i>
             </li>
@@ -49,19 +49,19 @@ const TechSolutions = () => {
           {/* Technology Grid - Updated with scrolling */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-4">
             {/* React JS Card */}
-            <div className="bg-[#051E16] w-[270px] h-[96px] opacity-100 rounded-[10px] border border-[#1E3D32] flex items-center justify-center" style={{ position: 'relative', zIndex: 1.5 }}>
+            <div className="bg-[#051E16] w-[260px] h-[90px] opacity-100 rounded-[10px] border border-[#1E3D32] flex items-center justify-center" style={{ position: 'relative', zIndex: 1.5 }}>
               <img
                 alt="React JS logo"
                 className="mr-2"
                 height="50"
-                src={reactlogo}
+                src={reactlog}
                 width="50"
               />
               <span className="text-[#FFFFFF]">React JS</span>
             </div>
 
             {/* Vue JS Card */}
-            <div className="bg-[#051E16] w-[270px] h-[96px] opacity-100 rounded-[10px] border border-[#1E3D32] flex items-center justify-center">
+            <div className="bg-[#051E16] w-[260px] h-[90px] opacity-100 rounded-[10px] border border-[#1E3D32] flex items-center justify-center">
               <img
                 alt="Vue JS logo"
                 className="mr-2"
@@ -73,7 +73,7 @@ const TechSolutions = () => {
             </div>
 
             {/* JavaScript Card */}
-            <div className="bg-[#051E16] w-[270px] h-[96px] opacity-100 rounded-[10px] border border-[#1E3D32] flex items-center justify-center">
+            <div className="bg-[#051E16] w-[260px] h-[90px] opacity-100 rounded-[10px] border border-[#1E3D32] flex items-center justify-center">
               <img
                 alt="JavaScript logo"
                 className="mr-2"
@@ -85,7 +85,7 @@ const TechSolutions = () => {
             </div>
 
             {/* CSS Card */}
-            <div className="bg-[#051E16] w-[270px] h-[96px] opacity-100 rounded-[10px] border border-[#1E3D32] flex items-center justify-center">
+            <div className="bg-[#051E16] w-[260px] h-[90px] opacity-100 rounded-[10px] border border-[#1E3D32] flex items-center justify-center">
               <img
                 alt="CSS logo"
                 className="mr-2"
@@ -97,7 +97,7 @@ const TechSolutions = () => {
             </div>
 
             {/* HTML Card */}
-            <div className="bg-[#051E16] w-[270px] h-[96px] opacity-100 rounded-[10px] border border-[#1E3D32] flex items-center justify-center">
+            <div className="bg-[#051E16] w-[260px] h-[90px] opacity-100 rounded-[10px] border border-[#1E3D32] flex items-center justify-center">
               <img
                 alt="HTML logo"
                 className="mr-2"
@@ -107,15 +107,15 @@ const TechSolutions = () => {
               />
               <span className="text-[#FFFFFF]">HTML</span>
             </div>
-            <div className="bg-[#051E16] w-[270px] h-[96px] opacity-100 rounded-[10px] border border-[#1E3D32] flex items-center justify-center">
+            <div className="bg-[#051E16] w-[260px] h-[90px] opacity-100 rounded-[10px] border border-[#1E3D32] flex items-center justify-center">
               <img
-                alt="CSS logo"
+                alt="nest.js logo"
                 className="mr-2"
                 height="50"
-                src={phplogo}
+                src={nextjsicons}
                 width="50"
               />
-              <span className="text-[#FFFFFF]">PHP</span>
+              <span className="text-[#FFFFFF]">Next JS</span>
             </div>
 
           </div>

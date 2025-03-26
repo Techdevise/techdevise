@@ -9,6 +9,8 @@ import Instagram from "../assets/Instagram.png"
 import LinkedIN from "../assets/LinkedIN.png"
 import Twitter from "../assets/Twitter.png"
 import Location from "../assets/Location.png"
+import Gmaillogo from "../assets/Gmaillogo.png"
+import Phonelogo from "../assets/Phonelogo.png"
 const Footer = () => {
   return (
     <footer className="relative text-white py-12 px-6 md:px-20 mt-[-80px]">
@@ -130,11 +132,11 @@ const Footer = () => {
                 <span>F - 268, Industrial Area, Sector 74, Sahibzada <br /> Ajit Singh Nagar, Punjab 160071</span>
               </p>
               <p className="flex items-center space-x-2 text-white font-semibold text-[18px] opacity-100 leading-[29px]">
-                <span>✉️</span>
+              <img src={Gmaillogo} alt="Gmail Icon" className="" />
                 <span>techdevise@gmail.com</span>
               </p>
               <p className="flex items-center space-x-2 text-white font-semibold text-[18px] opacity-100 leading-[29px]">
-                <span>📞</span>
+              <img src={Phonelogo} alt="Phone Icon" className="" />
                 <span>+91 1234567891</span>
               </p>
             </div>

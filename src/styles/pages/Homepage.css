@@ -1,0 +1,10 @@
+.lamp_banner {
+    top: 180px;
+}
+.hover\:bg-green-700:hover {
+    border: 0px;
+}
+.bord_line {
+    border-bottom: 1px solid #1c3531;
+    padding-bottom: 21px;
+}

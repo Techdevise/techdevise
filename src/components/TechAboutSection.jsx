@@ -3,11 +3,13 @@ import office from '../assets/office.png';
 
 function TechAboutSection() {
     return (
-        <div className="flex w-[1676px] h-[597px] bg-[#061611] p-12 border border-white rounded-lg">
-            {/* Left side with text */}
+<div className="relative flex w-[1676px] h-[597px] bg-[#061611] p-12 rounded-[20px] overflow-hidden">
+  <div className="absolute inset-0 border border-white rounded-[20px] opacity-10"></div>
+  <div className="absolute inset-0 border border-green rounded-[20px] opacity-10"></div>
+{/* Left side with text */}
             <div className="flex-1 flex flex-col justify-center">
                 <div className="inline-block mb-4">
-                    <span className="text-emerald-300 w-[100px] h-[44px] border border-emerald-300 rounded-full px-6 py-2 text-sm font-medium">
+                    <span className="text-emerald-300 w-[100px] h-[44px] border border-[#2d4642] rounded-full px-6 py-2 text-[20] font-semibold">
                         About
                     </span>
                 </div>

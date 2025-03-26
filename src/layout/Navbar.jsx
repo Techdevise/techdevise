@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "../styles/components/Navbar.css";
 import Button from '../components/Button';
 import techdeviselogo from '../assets/techdeviselogo.png'
 
@@ -36,7 +37,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute left-[120px] top-[33px] w-[1680px] h-[82px] text-white py-4 px-6 flex justify-between items-center bg-cover bg-center opacity-100"
+    <nav className="nav_head absolute left-[120px] top-[33px] w-[1680px] h-[82px] text-white py-4 px-6 flex justify-between items-center bg-cover bg-center opacity-100"
       style={{ backgroundImage: "url('')" }}
     >
       <div className="flex items-center w-[190.52px] h-[90px] opacity-100">

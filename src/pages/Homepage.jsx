@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/pages/Homepage.css'; 
 import TechAboutSection from '../components/TechAboutSection';
 import TrustedBy from './TrustedBy';
 import ServicesSection from './ServicesSection';
@@ -77,7 +78,7 @@ function Homepage() {
             Expert Development Services for you
           </h1>
 
-          <div className="mt-8 mb-12">
+          <div className="mt-8 mb-12 bord_line">
             <h2 className="text-[96px] leading-none font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#157B6C] font-Montserrat">
               <span className="text-[#D4E7E4]">Digital</span>{' '}
               <span className="text-[#8CBEB7]">marketing</span>
@@ -85,7 +86,7 @@ function Homepage() {
           </div>
 
           {/* Graphic Element */}
-          <div className="absolute left-[1100px] top-[190px] w-[541.86px] h-[358.86px] z-0">
+          <div className="lamp_banner absolute left-[1100px] top-[190px] w-[541.86px] h-[358.86px] z-0">
             <img src={home} alt="Design Element"
               className="w-full h-full object-contain opacity-100" />
             {/* Lamp */}
@@ -102,21 +103,21 @@ function Homepage() {
               className="absolute top-[-350px] left-[470px] w-[49.99px] h-[317.44px] opacity-100"
             />
             {/* Line Image */}
-            <img
+            {/* <img
               src={Line}
               alt="Line"
               className="absolute top-[-350px] w-full left-1/2 transform -translate-x-1/2 h-auto opacity-100" // Adjusted width and added centering classes
-            />
+            /> */}
           </div>
 
 
           {/* CTA Button */}
           <button className="relative z-20 border border-white text-white px-[24px] py-[20px] rounded-[10px] 
-                          font-Montserrat text-[20px] font-semibold flex items-center gap-2 
-                          w-[279px] h-[70px] mt-[50px] hover:bg-white hover:text-black 
-                          transition-colors duration-300 whitespace-nowrap">
+                  font-Montserrat text-[20px] font-semibold flex items-center justify-center gap-2 
+                  w-[280px] h-[70px] mt-[50px] hover:bg-white hover:text-black 
+                  transition-colors duration-300 whitespace-nowrap">
             Consult Our Experts
-            <span className="text-4xl w-[41px]">→</span>
+            <span className="text-4xl w-[40px]">→</span>
           </button>
         </div>
 
@@ -126,14 +127,14 @@ function Homepage() {
         </div>
 
         {/* Trusted By Section */}
-        <div className="relative z-10 mt-[340px] h-[166px] flex items-center">
+        <div className="relative z-10 mt-[310px] h-[166px] flex items-center">
           <TrustedBy />
 
 
         </div>
 
         {/* About Section */}
-        <div className="relative z-10 w-[1676px] mx-auto mt-[50px] h-[597px] rounded-[20px_40px_60px_80px] overflow-hidden bg-[#061611]">
+        <div className="relative z-10 w-[1676px] mx-auto mt-[50px] h-[597px] overflow-hidden bg-[#061611]">
           {/* <img
             src={future}
             alt="About Tech Devise"

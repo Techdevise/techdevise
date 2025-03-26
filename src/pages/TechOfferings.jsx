@@ -1,4 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import Arrowright from "../assets/Arrowright.png";
+import Arrowright1 from "../assets/Arrowright1.png";
+
+
 
 const clocks = [
   { country: "India", timeZone: "Asia/Kolkata", color: "bg-blue-300" },
@@ -125,41 +129,48 @@ const TechOfferings = () => {
 
         {/* Offshore Development Section */}
         <div className="relative min-w-[1215px] h-[436px] bg-[#0F261E] p-8 rounded-3xl shrink-0">
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Build your offshore development team
-          </h3>
-          <p className="text-xl text-gray-300 mb-8 text-center">
-            At TechDevise, setting up a dedicated software development team is
-            quick and hassle-free, completed in just four simple steps.
-          </p>
+      <h3 className="text-3xl font-bold text-white mb-4">
+        Build your offshore development team
+      </h3>
+      <p className="text-xl text-gray-300 mb-8 text-center">
+        At TechDevise, setting up a dedicated software development team is quick and hassle-free, completed in just four simple steps.
+      </p>
 
-          {/* Steps Section */}
-          <div 
-            ref={stepsContainerRef}
-            className="flex justify-between gap-4 overflow-x-hidden items-center"
-          >
-            {[1, 2, 3, 4].map((step, index) => (
-              <div 
-                key={index} 
-                className="relative flex items-center shrink-0 step-item" // Added step-item class
-              >
-                <div className={`w-64 h-40 ${index % 2 === 0 ? 'bg-green-500 text-white' : 'bg-white text-black'} p-6 rounded-lg shadow-md border`}>
-                  <h4 className="text-2xl font-bold mb-2">
-                    {index === 0 && 'Share your Requirements'}
-                    {index === 1 && 'Select your team'}
-                    {index === 2 && 'Team Setup'}
-                    {index === 3 && 'Start Working'}
-                  </h4>
-                  <p className="text-lg">
-                    {index === 0 && 'Define your project needs and skills required'}
-                    {index === 1 && 'Choose from our pool of experienced developers'}
-                    {index === 2 && 'Get your team up and running in a few days'}
-                    {index === 3 && 'Start working with your dedicated team'}
-                  </p>
-                </div>
-              </div>
-            ))}
+      {/* Steps Section */}
+      <div 
+    ref={stepsContainerRef}
+    className="flex justify-between gap-4 overflow-x-hidden items-center"
+  >
+    {[0, 1, 2, 3].map((index) => (
+      <React.Fragment key={index}>
+        <div className="relative flex items-center shrink-0 step-item">
+          <div className={`w-64 h-40 ${index % 2 === 0 ? 'bg-green-500 text-white' : 'bg-white text-black'} p-6 rounded-lg shadow-md border`}>
+            <h4 className="text-2xl font-bold mb-2">
+              {index === 0 && 'Share your Requirements'}
+              {index === 1 && 'Select your team'}
+              {index === 2 && 'Team Setup'}
+              {index === 3 && 'Start Working'}
+            </h4>
+            <p className="text-lg">
+              {index === 0 && 'Define your project needs and skills required'}
+              {index === 1 && 'Choose from our pool of experienced developers'}
+              {index === 2 && 'Get your team up and running in a few days'}
+              {index === 3 && 'Start working with your dedicated team'}
+            </p>
           </div>
+          {/* Arrow between steps */}
+          {index !== 3 && (
+            <img 
+              src={index % 2 === 0 ? Arrowright : Arrowright1} 
+              className="absolute right-[-10px] mt-[300px] transform -translate-y-1/2"
+              alt="arrow"
+            />
+          )}
+        </div>
+      </React.Fragment>
+    ))}
+  </div>
+
 
           {/* Navigation Buttons - Updated with onClick handlers */}
           <div className="absolute mt-[-400px] left-1/3 gap-4 -translate-x-1/2 flex">

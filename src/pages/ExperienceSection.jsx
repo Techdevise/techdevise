@@ -42,9 +42,11 @@ const ExperienceCard = ({ targetValue, label, bgColor, highlightColor }) => {
       ref={cardRef}
       className={`${bgColor} w-[328px] h-[270px] rounded-[26px] p-6 relative transition-transform duration-300 hover:scale-105 shadow-lg`}
     >
-      <span className="text-[56px] font-black">{count}+</span>
+    <span className="absolute top-1/2 left-1/2 transform -translate-x-1/4 -translate-y-1/2 text-[56px] font-black">
+    {count}+
+  </span>
       <div
-        className={`${highlightColor} h-[60px] absolute bottom-0 left-0 right-0 rounded-b-[26px] flex items-center justify-center`}
+        className={`${highlightColor} h-[100px] absolute bottom-0 left-0 right-0 rounded-b-[26px] flex items-center justify-center`}
       >
         <span className="text-[24px] font-semibold">{label}</span>
       </div>

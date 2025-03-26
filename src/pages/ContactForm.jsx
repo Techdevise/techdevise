@@ -77,7 +77,8 @@ const ContactForm = () => {
                                 max="100000"
                                 value={budget}
                                 onChange={(e) => setBudget(e.target.value)}
-                                className="w-full bg-[#0F261E] rounded-lg"
+                                className="w-full rounded-lg"
+                                style={{ background: "#157B6C" }}
                             />
                             <span className="text-lg md:text-2xl font-medium">${budget.toLocaleString()}</span>
                         </div>
@@ -90,9 +91,9 @@ const ContactForm = () => {
                     <div className="col-span-2 flex justify-start">
                         <button
                             type="submit"
-                            className="bg-[#4ADE80] text-[#061611] font-bold py-4 px-12 rounded-lg hover:bg-[#3BC46F] transition-colors text-lg"
+                            className="bg-[#FFFFFF] text-[#137365] font-bold py-4 px-12 rounded-lg hover:bg-[#3BC46F] transition-colors shadow-md hover:text-white hover:bg-green-700 transition-all duration-300 hover:scale-105"
                         >
-                            Submit →
+                            Submit 
                         </button>
                     </div>
                 </form>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import graphoIcon from "../assets/Compnay logo.png";
 import emblemIcon from "../assets/emblemIcon.png";
 import iconicIcon from "../assets/iconicIcon.png";
@@ -6,14 +6,15 @@ import optimalIcon from "../assets/optimalIcon.png";
 import vectraIcon from "../assets/vectraIcon.png";
 
 const brands = [
-  { name: "Grapho", icon: graphoIcon },
-  { name: "Emblem", icon: emblemIcon },
-  { name: "Iconic", icon: iconicIcon },
-  { name: "Optimal", icon: optimalIcon },
-  { name: "Vectra", icon: vectraIcon },
+  { name: "", icon: graphoIcon },
+  { name: "", icon: emblemIcon },
+  { name: "", icon: iconicIcon },
+  { name: "", icon: optimalIcon },
+  { name: "", icon: vectraIcon },
 ];
 
 const TrustedBy = () => {
+  const [isPaused, setIsPaused] = useState(false);
   return (
     <div className="w-full h-[166px] bg-[#061611] text-white flex flex-col items-center justify-center overflow-hidden relative">
       <div className="text-center z-10 mb-4">
@@ -21,11 +22,17 @@ const TrustedBy = () => {
         <p className="text-lg font-bold">Our global clients Network</p> */}
       </div>
       <div className="absolute bottom-0 w-full overflow-hidden">
-        <div className="flex animate-scroll items-center">
+      <div
+          className={`flex items-center ${
+            isPaused ? "animation-paused" : "animate-scroll"
+          }`}
+        >
           {[...brands, ...brands].map((brand, index) => (
-            <div 
+            <div
               key={index}
               className="flex-shrink-0 mx-16 flex flex-col items-center opacity-60 hover:opacity-100 transition-opacity duration-300"
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
             >
               <img src={brand.icon} alt={brand.name} className="h-10 mb-7" />
               <p className="text-lg text-gray-400 mb-5 font-bold">{brand.name}</p>

@@ -11,6 +11,7 @@ import uiux from "../assets/uiux.png"
 
 
 
+
 export default function ServicesSection() {
   return (
     <div className="w-[1680px] h-[985px] p-6 bg-[#061611] ml-[-100px]">
@@ -39,8 +40,8 @@ export default function ServicesSection() {
         <ServiceCard 
           title="Website Development"
           description="Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow."
-          bgColor="bg-emerald-400"
-          style={{ width: '200px', height: '200px', margin: '0 auto' }}
+          topColor="#67C792"  // Green Top
+          bottomColor="#3AAD6E" // Light Green Bottom
           imagePath={web}
         />
         
@@ -59,9 +60,7 @@ export default function ServicesSection() {
             </span>
           </button>
         </div>
-
-        {/* Image Section */}
-        <div className="w-1/2 flex items-center justify-center bg-emerald-300">
+        <div className="w-1/2 flex items-center justify-center bg-[#5DC6B9]">
           <img
             src={ecommerce}
             alt="E-commerce Illustration"
@@ -73,8 +72,8 @@ export default function ServicesSection() {
         <ServiceCard 
           title="Digital Marketing"
           description="Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow."
-          bgColor="bg-yellow-200"
-          style={{ width: '200px', height: '200px', margin: '0 auto' }}
+          topColor="#DEEA99"  // Green Top
+          bottomColor="#B1BF62" // Light Green Bottom
           imagePath={digital}
         />
       </div>
@@ -95,24 +94,24 @@ export default function ServicesSection() {
         <ServiceCard 
           title="Quality Analysis"
           description="Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow."
-          bgColor="bg-blue-200"
-          style={{ width: '200px', height: '200px', margin: '0 auto' }}
+          topColor="#99CBEA"  // Green Top
+          bottomColor="#76B6DE" // Light Green Bottom
           imagePath={quality}
         />
         
         <ServiceCard 
           title="Mobile Application development"
           description="Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow."
-          bgColor="bg-pink-400"
-          style={{ width: '200px', height: '200px', margin: '0 auto' }}
+          topColor="#EA99B9"  // Green Top
+          bottomColor="#DD7AA2" // Light Green Bottom
           imagePath={mobile}
         />
         
         <ServiceCard 
           title="UI/UX Design"
           description="Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow."
-          bgColor="bg-red-300"
-          style={{ width: '200px', height: '200px', margin: '0 auto' }}
+          topColor="#EA9C99"  // Green Top
+  bottomColor="#D67F7C" // Light Green Bottom
           imagePath={uiux}
         />
       </div>
