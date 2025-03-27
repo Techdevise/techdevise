@@ -72,8 +72,8 @@ export default function ServicesSection() {
         <ServiceCard 
           title="Digital Marketing"
           description="Enhance your brand's presence with our creative digital marketing tools! Engage your audience and see your business grow."
-          topColor="#DEEA99"  // Green Top
-          bottomColor="#B1BF62" // Light Green Bottom
+          topColor="#DEEA99"  
+          bottomColor="#B1BF62" 
           imagePath={digital}
         />
       </div>

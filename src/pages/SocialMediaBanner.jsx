@@ -23,7 +23,7 @@ const SocialMediaBanner = () => {
         <img src={Arrowlogo} alt="Arrologo" className="absolute w-[222px] h-[122px] left-[500px] mt-[-110px]" />
       </div>
       <div className="flex space-x-5">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-0">
           <a href="https://www.linkedin.com/company/tech-devise/posts/?feedView=all" className="bg-[#0077B5] text-white w-[440px] h-[132px] opacity-100 flex items-center justify-center text-xl font-bold">
             <img
               src={Linkdinlogo}

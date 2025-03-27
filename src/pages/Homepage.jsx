@@ -114,7 +114,7 @@ function Homepage() {
           {/* CTA Button */}
           <button className="relative z-20 border border-white text-white px-[24px] py-[20px] rounded-[10px] 
                   font-Montserrat text-[20px] font-semibold flex items-center justify-center gap-2 
-                  w-[280px] h-[70px] mt-[50px] hover:bg-white hover:text-black 
+                  w-[280px] h-[70px] mt-[115px] hover:bg-white hover:text-black 
                   transition-colors duration-300 whitespace-nowrap">
             Consult Our Experts
             <span className="text-4xl w-[40px]">→</span>
@@ -127,7 +127,7 @@ function Homepage() {
         </div>
 
         {/* Trusted By Section */}
-        <div className="relative z-10 mt-[310px] h-[166px] flex items-center">
+        <div className="relative z-10 mt-[245px] h-[166px] flex items-center">
           <TrustedBy />
 
 
