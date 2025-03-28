@@ -1,0 +1,20 @@
+.blockchain-wrapper {
+    display: inline-block;
+}
+.blockchain-img1 {
+    mix-blend-mode: luminosity;
+  position: relative;
+  z-index: 1;
+}
+
+.blockchain-services {
+    display: inline-table;
+    background: linear-gradient(to right, #e0e0e0, #157B6C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #157B6C;
+}
+.blockchaindotcom {
+    z-index: 2;
+}

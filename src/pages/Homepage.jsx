@@ -3,6 +3,7 @@ import '../styles/pages/Homepage.css';
 import TechAboutSection from '../components/TechAboutSection';
 import TrustedBy from './TrustedBy';
 import ServicesSection from './ServicesSection';
+import BlockchainServices from '../components/BlockchainServices';
 import TechOfferings from './TechOfferings';
 import TechSolutions from "./TechSolutions";
 import SocialLinks from './SocialMediaBanner';
@@ -142,6 +143,7 @@ function Homepage() {
           /> */}
           <TechAboutSection />
         </div>
+        
 
 
         {/* Experience Section */}
@@ -183,18 +185,37 @@ function Homepage() {
           ))}
         </div> */}
           <ServicesSection />
+        
         </div>
-        <TechSolutions />
-        <SocialLinks />
-        <div className="flex justify-center items-center min-h-screen">
-          <IndustryVision />
-        </div>
-        <Testimonials />
-        <ContactForm />
-        <LocationSection />
+        {/* <ServicesSection /> */}
 
-        {/* Bottom Spacer */}
-        <div className="h-[100px]"></div>
+{/* Blockchain Section with Correct Positioning */}
+<div className="relative flex justify-center items-center py-20 z-10 mt-10">
+  <BlockchainServices />
+</div>
+
+<TechSolutions />
+<SocialLinks />
+
+{/* Industry Vision Section */}
+<div className="flex justify-center items-center min-h-screen">
+  <IndustryVision />
+</div>
+
+<Testimonials />
+
+{/* Footer Section Fix */}
+<div className="relative bg-[#061611] py-20">
+  <ContactForm />
+
+</div>
+<div className="relative bg-[#061611]">
+  <LocationSection />
+</div>
+
+{/* Add extra space to prevent overlap */}
+<div className="h-[100px]"></div>
+
         {/* <TechSolutions /> */}
       </div>
     </main>

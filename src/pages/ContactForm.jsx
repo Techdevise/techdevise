@@ -5,7 +5,7 @@ const ContactForm = () => {
     const [budget, setBudget] = useState(20000);
 
     return (
-        <div className="max-w-[1680px] h-auto bg-[#061611] text-white rounded-[10px] mx-auto p-8 md:p-16 flex flex-col md:flex-row border border-[#529D92]">
+        <div className="contact-wrapper max-w-[1680px] h-auto bg-[#061611] text-white rounded-[10px] mx-auto p-8 md:p-16 flex flex-col md:flex-row border border-[#529D92]">
             {/* Left Section */}
             <div className="w-full md:w-1/2 pr-0 md:pr-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-[#1E3D32] mb-8 md:mb-0">
                 <h2  style={{

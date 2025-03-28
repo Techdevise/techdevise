@@ -9,6 +9,7 @@ import About from './pages/About';
 // import ExperienceSection from './pages/ExperienceSection';
 import Navbar from './layout/Navbar';
 import Footer from './layout/Footer'; 
+import MobileDevelopment from './pages/MobileDevelopment';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="contact" element={<ContactUs />} />
         <Route path="/blog/:id" element={<BlogDetails />} />
-      </Routes>
+        <Route path="/services/mobile-app-development" element={<MobileDevelopment />} />
+        </Routes>
       {/* <ExperienceSection /> */}
       <Navbar />
       <Footer />

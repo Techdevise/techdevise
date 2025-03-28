@@ -102,17 +102,34 @@ const TechSolutions = () => {
                 onClick={() => setSelectedCategory(category)}
               >
                 {category}
+                <i
+                  className={`fas fa-arrow-right ml-2 transition-transform duration-300 ${
+                    selectedCategory === category
+                      ? "translate-x-2 opacity-100" 
+                      : "opacity-0"
+                  }`}
+                ></i>
+                  <div
+                  className={`h-[2px] bg-[#157B6C] transition-all duration-300 mt-1 ${
+                    selectedCategory === category ? "w-28" : "w-0"
+                  }`}
+                ></div>
               </li>
             ))}
           </ul>
+          
         </div>
+
+        {/* Vertical Border */}
+        {/* <div className="hidden md:block border-l border-[#2d4642] h-[50%] ml-[-50px] mt-[200px]"></div> */}
+
 
         {/* Right Column */}
         <div className="w-full mt-6 md:mt-0 h-full overflow-auto">
           <p className="paragraph w-full text-lg mb-6 w-[656px] opacity-100 font-montserrat font-medium text-[#FFFFFF] mt-[50px] text-right">
             Empowering businesses with cutting-edge IT solutions, including
             cloud <br /> computing, cybersecurity, AI, automation, and software
-            development <br /> to drive efficiency, security, and growth.<br />
+            development <br /> to drive efficiency, security, and growth cybersecurity, AI, automation.<br />
           </p>
 
           {/* Technology Grid */}

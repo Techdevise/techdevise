@@ -37,7 +37,7 @@ const locations = [
 
 const LocationSection = () => {
   return (
-    <div className="max-w-[1900px] h-auto text-white py-20 px-4 md:px-32">
+    <div className="bg-[#061611] max-w-[1900px] h-auto text-white py-20 px-4 md:px-32">
       {/* Header Section */}
       <div className="mb-10">
         <h2

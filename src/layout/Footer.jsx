@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/components/Footer.css";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Rectangle114 from "../assets/Rectangle 114.png";
 import Rectangle191 from "../assets/Rectangle 191.png";
@@ -13,7 +14,7 @@ import Gmaillogo from "../assets/Gmaillogo.png"
 import Phonelogo from "../assets/Phonelogo.png"
 const Footer = () => {
   return (
-    <footer className="relative text-white py-12 px-6 md:px-20 mt-[-80px]">
+    <footer className="relative text-white py-12 px-6 md:px-20 mt-[1250px]">
       {/* Background Image */}
       <div
         className="absolute inset-0 z-0 rounded-t-[90px]"
