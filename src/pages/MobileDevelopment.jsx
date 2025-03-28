@@ -1,7 +1,6 @@
 import React from "react";
 import Mobilebackimg from '../assets/Mobilebackimg.png'
-import Mobilebackmiddle from '../assets/Mobilebackmiddle.png'
-import vedioimg from '../assets/vedioimg.png'
+import Vedioimg from '../assets/Vedioimg.png'
 // import LocationSection from "./LocationSection";
 
 const MobileDevelopment = () => {
@@ -27,7 +26,7 @@ const MobileDevelopment = () => {
             {/* Content */}
             <div className="relative text-center text-white px-6 max-w-4xl">
                 <button className="absolute top-[-70px] left-1/2 transform -translate-x-1/2 bg-white bg-opacity-20 p-5 rounded-full hover:bg-opacity-40">
-                <img src={vedioimg} alt="Vedio image" viewBox="0 0 24 24"
+                <img src={Vedioimg} alt="Vedio image" viewBox="0 0 24 24"
                         fill="currentColor" className="w-10 h-10 text-white" />
                     {/* <svg
                         className="w-10 h-10 text-white"
