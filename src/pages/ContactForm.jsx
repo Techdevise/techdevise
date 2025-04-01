@@ -41,31 +41,36 @@ const ContactForm = () => {
                 <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                         type="text"
-                        placeholder="Full Name"
+                        placeholder="First Name"
                         className="w-full p-4 bg-[#0F261E] rounded-[10px] text-white outline-none font-Montserrat text-[16px] md:text-[18px] border border-[#529D92]"/>
                     <input
-                        type="email"
-                        placeholder="Business Email"
+                        type="Last Name"
+                        placeholder="Last Name"
+                        className="w-full p-4 bg-[#0F261E] rounded-[10px] text-white outline-none font-Montserrat text-[16px] md:text-[18px] border border-[#529D92]"/>
+                    <input
+                        type="text"
+                        placeholder="Email"
                         className="w-full p-4 bg-[#0F261E] rounded-[10px] text-white outline-none font-Montserrat text-[16px] md:text-[18px] border border-[#529D92]"/>
                     <input
                         type="text"
                         placeholder="Mobile Number"
                         className="w-full p-4 bg-[#0F261E] rounded-[10px] text-white outline-none font-Montserrat text-[16px] md:text-[18px] border border-[#529D92]"/>
-                    <input
-                        type="text"
-                        placeholder="Company Name"
-                        className="w-full p-4 bg-[#0F261E] rounded-[10px] text-white outline-none font-Montserrat text-[16px] md:text-[18px] border border-[#529D92]"/>
                     <select className="w-full p-4 bg-[#0F261E] rounded-[10px] text-white outline-none font-Montserrat text-[16px] md:text-[18px] border border-[#529D92]">
-                        <option value="">Job Title</option>
-                        <option value="Developer">Developer</option>
-                        <option value="Designer">Designer</option>
-                        <option value="Manager">Manager</option>
+                        <option value="">Nature of work</option>
+                    
+                        <option value="Developer">Business</option>
+                        <option value="Designer">Intermediate</option>
+                        <option value="Manager">Individual</option>
                     </select>
                     <select className="w-full p-4 bg-[#0F261E] rounded-[10px] text-white outline-none font-Montserrat text-[16px] md:text-[18px] border border-[#529D92]">
-                        <option value="">Launch timeline?</option>
-                        <option value="1 Month">1 Month</option>
-                        <option value="3 Months">3 Months</option>
-                        <option value="6 Months">6 Months</option>
+                        <option value="">Purpose</option>
+                        <option value="1 Month">CoPilot</option>
+                        <option value="3 Months">Build a Product/service</option>
+                        <option value="6 Months">Technical Support Query</option>
+                        <option value="6 Months">Sales Partnership Query</option>
+                        <option value="6 Months">Schedule a Demo</option>
+                        <option value="6 Months"></option>
+
                     </select>
 
                     <div className="col-span-2">
@@ -84,7 +89,7 @@ const ContactForm = () => {
                         </div>
                     </div>
                     <textarea
-                        placeholder="About Project"
+                        placeholder="Message"
                         className="col-span-2 w-full p-4 bg-[#0F261E] rounded-[10px] text-white outline-none font-Montserrat text-[16px] md:text-[18px] h-[150px] border border-[#529D92]"
                     ></textarea>
 

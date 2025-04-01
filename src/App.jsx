@@ -10,6 +10,7 @@ import About from './pages/About';
 import Navbar from './layout/Navbar';
 import Footer from './layout/Footer'; 
 import MobileDevelopment from './pages/MobileDevelopment';
+import DigitalMarketing from './pages/DigitalMarketing';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="contact" element={<ContactUs />} />
         <Route path="/blog/:id" element={<BlogDetails />} />
         <Route path="/services/mobile-app-development" element={<MobileDevelopment />} />
+        <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
         </Routes>
       {/* <ExperienceSection /> */}
       <Navbar />
