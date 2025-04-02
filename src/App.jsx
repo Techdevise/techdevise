@@ -11,6 +11,7 @@ import Navbar from './layout/Navbar';
 import Footer from './layout/Footer'; 
 import MobileDevelopment from './pages/MobileDevelopment';
 import DigitalMarketing from './pages/DigitalMarketing';
+import WebsiteDevelopment from './pages/WebsiteDevelopment';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/blog/:id" element={<BlogDetails />} />
         <Route path="/services/mobile-app-development" element={<MobileDevelopment />} />
         <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
+        <Route path="/services/website-development" element={<WebsiteDevelopment />} />
         </Routes>
       {/* <ExperienceSection /> */}
       <Navbar />

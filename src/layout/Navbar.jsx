@@ -46,11 +46,13 @@ const Navbar = () => {
         style={{ backgroundImage: "url('')" }}
       >
         <div className="flex items-center w-[190.52px] h-[90px] opacity-100">
+        <a href="http://51.21.132.30:3000/" target="_blank" rel="noopener noreferrer">
           <img
             alt="Tech Devise Logo"
             className="w-[179.52px] h-[56px] opacity-100 mr-2"
             src={techdeviselogo || "/placeholder.svg"}
           />
+           </a>
           <span className="text-2xl font-bold"></span>
         </div>
 
