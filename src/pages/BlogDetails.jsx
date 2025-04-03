@@ -115,9 +115,7 @@ const BlogDetails = () => {
       <RecentBlog />
       <LocationSection />
 
-      <div className="relative text-white py-12 px-6 md:px-20">
-        {/* Footer Section */}
-      </div>
+     
     </div>
   );
 };

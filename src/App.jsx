@@ -17,7 +17,7 @@ import WebsiteDevelopment from './pages/WebsiteDevelopment';
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+     <main className="flex-grow">
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
@@ -30,9 +30,12 @@ function App() {
         <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
         <Route path="/services/website-development" element={<WebsiteDevelopment />} />
         </Routes>
-      {/* <ExperienceSection /> */}
-      <Navbar />
-      <Footer />
+        </main>
+        {/* <Navbar /> */}
+        <div className="flex flex-col">
+        <Navbar />
+        <Footer />
+        </div>
       <ToastContainer />
     </BrowserRouter>
   );

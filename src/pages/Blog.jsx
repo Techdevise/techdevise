@@ -14,10 +14,7 @@ function Blog() {
             <BlogCard />
             <AllBlogPost />
             <LocationSection />
-            <div className="relative text-white py-12 px-6 md:px-20">
-                {/* <Footer /> */}
-
-            </div>
+           
         </div>
     );
 }

@@ -57,13 +57,13 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex space-x-6 text-lg w-[762px] h-[24px] opacity-100">
-          <Link
+        <div className="hidden md:flex space-x-6 text-lg w-[533px] h-[24px] opacity-100">
+          {/* <Link
             to="/"
             className="w-[88px] h-[24px] opacity-100 text-[20px] font-medium leading-auto hover:text-gray-300"
           >
             Home
-          </Link>
+          </Link> */}
 
           {/* Services Dropdown */}
           <div

@@ -2,34 +2,27 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/components/Footer.css";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import Rectangle114 from "../assets/Rectangle 114.png";
+// import Rectangle114 from "../assets/Rectangle 114.png";
 import Rectangle191 from "../assets/Rectangle 191.png";
 import LOGO from "../assets/LOGO011 3.png";
-import Facebook from "../assets/Facebook.png"
-import Instagram from "../assets/Instagram.png"
-import LinkedIN from "../assets/LinkedIN.png"
-import Twitter from "../assets/Twitter.png"
+import Facebook from "../assets/Facebook.svg"
+import Instagram from "../assets/Instagram.svg"
+import LinkedIN from "../assets/LinkedIN.svg"
+import Twitter from "../assets/Twitter.svg"
 import Location from "../assets/Location.png"
 import Gmaillogo from "../assets/Gmaillogo.png"
 import Phonelogo from "../assets/Phonelogo.png"
 const Footer = () => {
   return (
-    <footer className="relative text-white py-12 px-6 md:px-20 mt-[1250px]">
+    <footer className="footer-bg relative text-white py-12 px-6 md:px-20">
       {/* Background Image */}
       <div
-        className="absolute inset-0 z-0 rounded-t-[90px]"
-        style={{
-          backgroundImage: `url(${Rectangle114})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          width: "100%",
-          height: "100%",
-        }}
+        className=" inset-0 z-0 rounded-t-[90px]"
+   
       ></div>
 
       {/* Main Footer Content */}
-      <div className="relative z-10 container mx-auto">
+      <div className="relative z-10 container mx-auto min-h-[50vh]">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row md:justify-between">
           <div className="md:w-1/2">
@@ -118,12 +111,7 @@ const Footer = () => {
 
         <div
           className="relative text-white py-6 px-6 md:px-20 rounded-lg bg-cover bg-center bg-no-repeat opacity-100 text-6xl font-semibold"
-          style={{
-            backgroundImage: `url(${Rectangle114})`,
-            width: '100%',
-            height: '117px',
-            borderRadius: '26px',
-          }}
+        
         >
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-300 text-sm">
             {/* Address and Contact */}

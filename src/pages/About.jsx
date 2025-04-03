@@ -55,10 +55,10 @@ function About() {
             <ITExperts />
 
             <LocationSection />
-            <div className="relative text-white py-12 px-6 md:px-20">
-                {/* <Footer /> */}
+            {/* <div className="relative text-white py-12 px-6 md:px-20">
+             
 
-            </div>
+            </div> */}
         </div>
     )
 }

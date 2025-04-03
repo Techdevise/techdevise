@@ -41,8 +41,8 @@ const ServiceCard = ({ title, description, imgSrc, bgColor, cornerRadius }) => (
 
 function Homepage() {
   return (
-    <main className="relative bg-[#061611] w-[1920px] h-[8050px]">
-      <div className="relative w-[1920px] h-[848px] bg-no-repeat bg-center bg-cover"
+    <main className="relative bg-[#061611] w-[1920px] h-full">
+      <div className="relative w-[1920px] h-full bg-no-repeat bg-center bg-cover"
         style={{ backgroundImage: `url(${Group})` }}>
 
         {/* Main Content Section */}
@@ -198,7 +198,7 @@ function Homepage() {
 <SocialLinks />
 
 {/* Industry Vision Section */}
-<div className="flex justify-center items-center min-h-screen">
+<div className="flex justify-center items-center">
   <IndustryVision />
 </div>
 
@@ -214,9 +214,9 @@ function Homepage() {
 </div>
 
 {/* Add extra space to prevent overlap */}
-<div className="h-[100px]"></div>
+{/* <div className="h-[100px]"></div> */}
 
-        {/* <TechSolutions /> */}
+     
       </div>
     </main>
   );

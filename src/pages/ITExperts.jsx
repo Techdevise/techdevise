@@ -77,11 +77,11 @@ function ITExperts() {
                             className="w-full h-full object-cover"
                         />
 
-                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20">
-                            <button className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                        {/* <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20"> */}
+                            {/* <button className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
                                 ▶️
-                            </button>
-                        </div>
+                            </button> */}
+                        {/* </div> */}
                     </div>
                 ))}
             </div>
