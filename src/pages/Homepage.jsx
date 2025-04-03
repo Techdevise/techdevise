@@ -10,8 +10,8 @@ import SocialLinks from './SocialMediaBanner';
 import IndustryVision from './IndustryVision';
 import Testimonials from './Testimonials';
 import home from "../assets/home.png";
-import googleicons from "../assets/googleicons.png"
-import analytics from "../assets/analytics.png"
+import Google from "../assets/Google.svg"
+import Googleanaylicts from "../assets/Googleanaylicts.svg"
 import future from "../assets/future.png"
 import lamp from "../assets/lamp.png"
 import light from "../assets/light.png"
@@ -51,7 +51,7 @@ function Homepage() {
           <div className="flex gap-4 p-4">
             <div className="rounded-lg shadow-md p-5 flex items-center gap-2 w-[229px] h-[56px] rounded-[15px] border border-[#fffff] p-2">
               <img
-                src={googleicons}
+                src={Google}
                 alt="Google Partner"
                 className="w-6 h-6"
               />
@@ -63,7 +63,7 @@ function Homepage() {
 
             <div className="rounded-lg shadow-md p-5 flex items-center gap-2 w-[229px] h-[56px] rounded-[15px] border border-[#fffff] p-2">
               <img
-                src={analytics}
+                src={Googleanaylicts}
                 alt="Google Analytics"
                 className="w-6 h-6"
               />
@@ -113,12 +113,12 @@ function Homepage() {
 
 
           {/* CTA Button */}
-          <button className="relative z-20 border border-white text-white px-[24px] py-[20px] rounded-[10px] 
-                  font-Montserrat text-[20px] font-semibold flex items-center justify-center gap-2 
+          <button className="relative z-20 border border-white text-white px-[24px] py-[20px] rounded-[12px] 
+                  font-Archivo text-[20px] font-semibold flex items-center justify-center gap-2 
                   w-[280px] h-[70px] mt-[115px] hover:bg-white hover:text-black 
                   transition-colors duration-300 whitespace-nowrap">
             Consult Our Experts
-            <span className="text-4xl w-[40px]">→</span>
+            <span className="text-4xl w-[50px]">→</span>
           </button>
         </div>
 

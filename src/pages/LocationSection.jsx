@@ -3,35 +3,35 @@ import indianflag from "../assets/indianflag.png";
 import unitedflag from "../assets/unitedflag.png";
 import netherland from "../assets/netherland.png";
 import egypt from "../assets/egypt.png";
-import Indiagate from "../assets/Indiagate.png"; 
-import Unitedstate from "../assets/Unitedstate.png";
-import Nether from "../assets/Nether.png";
-import Egyp from "../assets/Egyp.png";
+import INDIA from "../assets/INDIA.svg"; 
+import UNITEDSTATES from "../assets/UNITEDSTATES.svg";
+import NETHERLAND from "../assets/NETHERLAND.svg";
+import EDYPT from "../assets/EDYPT.svg";
 
 const locations = [
   {
     country: "India",
     address: "F - 268, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar, Punjab 160071",
     flag: <img src={indianflag} alt="Indian flag" className="w-6 h-6" />,
-    image: Indiagate, 
+    image: INDIA, 
   },
   {
     country: "United States",
     address: "1600 Pennsylvania Avenue NW, Washington, DC 20500, USA",
     flag: <img src={unitedflag} alt="United States flag" className="w-6 h-6" />,
-    image: Unitedstate, 
+    image: UNITEDSTATES, 
   },
   {
     country: "Netherlands",
     address: "Paleisstraat 1, 1012 RB Amsterdam, Netherlands",
     flag: <img src={netherland} alt="Netherlands flag" className="w-6 h-6" />,
-    image: Nether,
+    image: NETHERLAND,
   },
   {
     country: "Egypt",
     address: "1 Al Tahrir Square, Downtown Cairo, Egypt",
     flag: <img src={egypt} alt="Egypt flag" className="w-6 h-6" />,
-    image: Egyp, 
+    image: EDYPT, 
   },
 ];
 
@@ -79,8 +79,8 @@ const LocationSection = () => {
             </div>
 
             {/* Right Section: Image */}
-            <div className="w-1/4 flex justify-end ">
-              <img src={location.image} alt={`${location.country} landmark`} className="w-[66px] h-[66px] rounded-lg" />
+            <div className="w-1/4 flex justify-end items-center">
+              <img src={location.image} alt={`${location.country} landmark`} className="rounded-lg object-cover mr-[-24px]" />
             </div>
           </div>
         ))}

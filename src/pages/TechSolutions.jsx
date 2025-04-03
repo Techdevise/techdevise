@@ -1,70 +1,76 @@
 import React, { useState } from "react";
-import reactlog from "../assets/reactlog.png";
-import vuelogo from "../assets/vuelogo.png";
-import javascriptlogo from "../assets/javascriptlogo.png";
-import htmllogo from "../assets/htmllogo.png";
-import csslogo from "../assets/csslogo.png";
-import nextjsicons from "../assets/nextjsicons.png";
-import javaicons from "../assets/javaicons.png";
-import nodejsicons from "../assets/nodejsicons.png";
-import phpicons from "../assets/phpicons.png";
-import pythonicons from "../assets/pythonicons.png";
-import goicons from "../assets/goicons.png";
-import dotneticons from "../assets/dotneticons.png";
+import React1 from "../assets/React1.svg"
+import Vue from "../assets/Vue.svg";
+import Javascript from "../assets/Javascript.svg";
+import Html from "../assets/Html.svg";
+import Css from "../assets/Css.svg";
+import Next from "../assets/Next.svg";
+import elogo from "../assets/elogo.svg";
+import Meteor from "../assets/Meteor.svg";
+import Java from "../assets/Java.svg";
+import Nodejs from "../assets/Nodejs.svg";
+import Php from "../assets/Php.svg";
+import Python from "../assets/Python.svg";
+import Go from "../assets/Go.svg";
+import Dotnet from "../assets/Dotnet.svg";
 import Maskgroup from "../assets/Maskgroup.png";
-import androidicons from "../assets/androidicons.png";
-import iosicons from "../assets/iosicons.png";
-import fluttericons from "../assets/fluttericons.png";
-import cordovaicons from "../assets/cordovaicons.png";
-import xamarinicons from "../assets/xamarinicons.png";
-import pwaicons from "../assets/pwaicons.png";
-import ionicicons from "../assets/ionicicons.png";
-import reactnativeicons from "../assets/reactnativeicons.png";
-import figmaicons from "../assets/figmaicons.png";
-import adobeicons from "../assets/adobeicons.png";
-import sketchicons from "../assets/sketchicons.png";
-import photoshopicons from "../assets/photoshopicons.png";
-import aiillustratoricons from "../assets/aiillustratoricons.png";
-import corelicons from "../assets/corelicons.png";
+import Android from "../assets/Android.svg";
+import Ios from "../assets/Ios.svg";
+import Flutter from "../assets/Flutter.svg";
+import Cordova from "../assets/Cordova.svg";
+import Xamarin from "../assets/Xamarin.svg";
+import Pwa from "../assets/Pwa.svg";
+import Ionic from "../assets/Ionic.svg";
+import Reactnative from "../assets/Reactnative.svg";
+import Figma from "../assets/Figma.svg";
+import Adobe from "../assets/Adobe.svg";
+import Sketch from "../assets/Sketch.svg";
+import Photoshop from "../assets/Photoshop.svg";
+import Aiillustrator from "../assets/Aiillustrator.svg";
+import Coreldraw from "../assets/Coreldraw.svg";
 
 const TechSolutions = () => {
   const [selectedCategory, setSelectedCategory] = useState("Frontend");
 
   const categories = {
     Frontend: [
-      { name: "React JS", logo: reactlog },
-      { name: "Vue JS", logo: vuelogo },
-      { name: "JavaScript", logo: javascriptlogo },
-      { name: "CSS", logo: csslogo },
-      { name: "HTML", logo: htmllogo },
-      { name: "Next JS", logo: nextjsicons },
+      { name: "React JS", logo: React1 },
+      { name: "Vue JS", logo: Vue },
+      { name: "JavaScript", logo: Javascript },
+      { name: "CSS", logo: Css },
+      { name: "HTML", logo: Html },
+      { name: "Next JS", logo: Next },
+      { name: "Ember", logo: elogo },
+      { name: "Meteor", logo: Meteor },
+
+
     ],
     Backend: [
-      { name: "Java", logo: javaicons },
-      { name: "Node.js", logo: nodejsicons },
-      { name: "Php", logo: phpicons },
-      { name: "Python", logo: pythonicons },
-      { name: "Go", logo: goicons },
-      { name: ".Net", logo: dotneticons },
+      { name: "Java", logo: Java },
+      { name: "Node.js", logo: Nodejs },
+      { name: "Php", logo: Php },
+      { name: "Python", logo: Python },
+      { name: "Go", logo: Go },
+      { name: ".Net", logo: Dotnet },
     ],
     Mobile: [
-      { name: "Android", logo: androidicons },
-      { name: "Flutter", logo: fluttericons },
-      { name: "Cordova", logo: cordovaicons },
-      { name: "Ios", logo: iosicons },
-      { name: "Xamarin", logo: xamarinicons },
-      { name: "PWA", logo: pwaicons },
-      { name: "Ionic", logo: ionicicons },
-      { name: "React Native", logo: reactnativeicons },
+      { name: "Android", logo: Android },
+      { name: "Flutter", logo: Flutter },
+      { name: "Cordova", logo: Cordova },
+      { name: "Ios", logo: Ios },
+      { name: "Xamarin", logo: Xamarin },
+      { name: "PWA", logo: Pwa },
+      { name: "Ionic", logo: Ionic },
+      { name: "React Native", logo: Reactnative },
 
     ],
     "UI/UX Design": [
-      { name: "Figma", logo: figmaicons },
-      { name: "Adobe XD", logo: adobeicons },
-      { name: "Photoshop", logo: photoshopicons },
-      { name: "lllustrator", logo: aiillustratoricons },
-      { name: "CorelDRAW", logo: corelicons },
-      { name: "Sketch", logo: sketchicons },
+      { name: "Figma", logo: Figma },
+      { name: "Adobe XD", logo: Adobe },
+      { name: "Photoshop", logo: Photoshop },
+      { name: "lllustrator", logo: Aiillustrator },
+      { name: "CorelDRAW", logo: Coreldraw },
+      { name: "Sketch", logo: Sketch },
 
     ],
   };

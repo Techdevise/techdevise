@@ -1,0 +1,24 @@
+.arrow_new {
+    position: relative;
+    bottom: 38px;
+}
+.abc {
+    min-height: 363px;
+}
+.main_test img {
+    height: 320px;
+    
+}
+.abc:nth-child(1) {
+    padding-top: 21px;
+}
+.abc:nth-child(3) div {
+    padding-top: 14px;
+}
+.test_monial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: left;
+}

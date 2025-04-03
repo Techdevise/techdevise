@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import TouchModal from "./TouchModal";
+// import TouchModal from "./TouchModal";
+import GettouchForm from "./GettouchForm";
 
 const Button = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -13,7 +14,7 @@ const Button = () => {
         Get in Touch
       </button>
 
-      {isModalOpen && <TouchModal onClose={() => setIsModalOpen(false)} />}
+      {isModalOpen && <GettouchForm onClose={() => setIsModalOpen(false)} />}
     </>
   );
 };

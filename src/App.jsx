@@ -3,6 +3,7 @@ import { ToastContainer } from "react-toastify";
 import Homepage from './pages/Homepage';
 import Portfolio from './pages/Portfolio';
 import ContactUs from './pages/ContactUs'
+import GettouchForm from './components/GettouchForm';
 import Blog from './pages/Blog';
 import BlogDetails from './pages/BlogDetails';
 import About from './pages/About';
@@ -23,6 +24,7 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="contact" element={<ContactUs />} />
+        <Route path="gettouch" element={<GettouchForm />} />
         <Route path="/blog/:id" element={<BlogDetails />} />
         <Route path="/services/mobile-app-development" element={<MobileDevelopment />} />
         <Route path="/services/digital-marketing" element={<DigitalMarketing />} />

@@ -1,8 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import Arrowright from "../assets/Arrowright.png";
-import Arrowright1 from "../assets/Arrowright1.png";
-
-
+import "../styles/pages/TechOfferings.css";
 
 const clocks = [
   { country: "India", timeZone: "Asia/Kolkata", color: "bg-blue-300" },
@@ -32,8 +29,8 @@ const Clock = ({ country, timeZone, color }) => {
   const secondAngle = seconds * 6;
 
   return (
-    <div className="flex flex-col items-center">
-      <div className={`w-32 h-32 ${color} rounded-full flex items-center justify-center border-[3px] border-gray-300 shadow-md relative`}>
+    <div className="clock_wise">
+      <div className={`main_new ${color} rounded-full flex items-center justify-center border-[3px] border-gray-300 shadow-md relative`}>
         <div className="relative w-full h-full flex items-center justify-center">
           <div
             className="absolute w-[4px] h-[30%] bg-gray-600 top-[20%] left-1/2 transform -translate-x-1/2 origin-bottom"
@@ -105,17 +102,21 @@ const TechOfferings = () => {
       </div>
 
       <div className="flex flex-nowrap gap-8 ml-[90px] overflow-visible">
-        <div className="min-w-[1215px] bg-[#0F261E] flex gap-8 h-[436px] rounded-3xl transition-transform duration-300">
-          <div className="w-[352px] bg-green-800 text-white p-6 rounded-full h-[352px] mt-10 ml-[50px] flex flex-col items-center justify-center border-2 border-dashed border-white transition-all duration-300 ease-in-out hover:bg-green-700 hover:shadow-lg hover:scale-105">
+        <div className="snjy_new min-w-[1215px] bg-[#0F261E] flex gap-8 h-[auto] rounded-3xl transition-transform duration-300">
+          <div class="clock_circle">
+          <div className="green_circle w-[352px] bg-[#157B6C] text-white p-6 rounded-full h-[352px] mt-10 ml-[50px] flex flex-col items-center justify-center  transition-all duration-300 ease-in-out  hover:shadow-lg hover:scale-105">
+            <div class="bord_whit">
             <h3 className="text-2xl font-bold mb-2 transition-colors duration-300 ease-in-out hover:text-yellow-300">Staff Augmentation</h3>
             <p className="text-center text-gray-300 transition-colors duration-300 ease-in-out hover:text-gray-100">
               Hire pre-vetted developers skilled in the latest technologies, ready
               to work around the clock to meet your project needs.
             </p>
+            </div>
+          </div>
           </div>
 
           {/* Clocks Section */}
-          <div className="grid grid-cols-3 grid-rows-2 gap-x-12 gap-y-8 mt-2 h-full w-[800px]">
+          <div className="new_cont">
             {clocks.map((clock, index) => (
               <Clock
                 key={index}
@@ -128,49 +129,42 @@ const TechOfferings = () => {
         </div>
 
         {/* Offshore Development Section */}
-        <div className="relative min-w-[1215px] h-[436px] bg-[#0F261E] p-8 rounded-3xl shrink-0">
-      <h3 className="text-3xl font-bold text-white mb-4">
-        Build your offshore development team
-      </h3>
-      <p className="text-xl text-gray-300 mb-8 text-center">
-        At TechDevise, setting up a dedicated software development team is quick and hassle-free, completed in just four simple steps.
-      </p>
+        <div className="relative min-w-[1215px] h-auto bg-[#0F261E] p-8 rounded-3xl shrink-0">
+          <h3 className="text-3xl font-bold text-white mb-4">
+            Build your offshore development team
+          </h3>
+          <p className="text-xl text-gray-300 mb-8 text-center">
+            At TechDevise, setting up a dedicated software development team is
+            quick and hassle-free, completed in just four simple steps.
+          </p>
 
-      {/* Steps Section */}
-      <div 
-    ref={stepsContainerRef}
-    className="flex justify-between gap-4 overflow-x-hidden items-center"
-  >
-    {[0, 1, 2, 3].map((index) => (
-      <React.Fragment key={index}>
-        <div className="relative flex items-center shrink-0 step-item">
-          <div className={`w-64 h-40 ${index % 2 === 0 ? 'bg-green-500 text-white' : 'bg-white text-black'} p-6 rounded-lg shadow-md border`}>
-            <h4 className="text-2xl font-bold mb-2">
-              {index === 0 && 'Share your Requirements'}
-              {index === 1 && 'Select your team'}
-              {index === 2 && 'Team Setup'}
-              {index === 3 && 'Start Working'}
-            </h4>
-            <p className="text-lg">
-              {index === 0 && 'Define your project needs and skills required'}
-              {index === 1 && 'Choose from our pool of experienced developers'}
-              {index === 2 && 'Get your team up and running in a few days'}
-              {index === 3 && 'Start working with your dedicated team'}
-            </p>
+          {/* Steps Section */}
+          <div 
+            ref={stepsContainerRef}
+            className="flex justify-between gap-4 overflow-x-hidden items-center"
+          >
+            {[1, 2, 3, 4].map((step, index) => (
+              <div 
+                key={index} 
+                className="relative flex items-center shrink-0 step-item" // Added step-item class
+              >
+                <div className={`w-64 h-auto ${index % 2 === 0 ? 'bg-green-500 text-white' : 'bg-white text-black'} p-6 rounded-lg shadow-md border`}>
+                  <h4 className="text-2xl font-bold mb-2">
+                    {index === 0 && 'Share your Requirements'}
+                    {index === 1 && 'Select your team'}
+                    {index === 2 && 'Team Setup'}
+                    {index === 3 && 'Start Working'}
+                  </h4>
+                  <p className="text-lg">
+                    {index === 0 && 'Define your project needs and skills required'}
+                    {index === 1 && 'Choose from our pool of experienced developers'}
+                    {index === 2 && 'Get your team up and running in a few days'}
+                    {index === 3 && 'Start working with your dedicated team'}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
-          {/* Arrow between steps */}
-          {index !== 3 && (
-            <img 
-              src={index % 2 === 0 ? Arrowright : Arrowright1} 
-              className="absolute right-[-10px] mt-[300px] transform -translate-y-1/2"
-              alt="arrow"
-            />
-          )}
-        </div>
-      </React.Fragment>
-    ))}
-  </div>
-
 
           {/* Navigation Buttons - Updated with onClick handlers */}
           <div className="absolute mt-[-400px] left-1/3 gap-4 -translate-x-1/2 flex">

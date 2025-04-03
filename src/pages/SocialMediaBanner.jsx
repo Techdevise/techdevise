@@ -28,28 +28,28 @@ const SocialMediaBanner = () => {
             <img
               src={Linkdinlogo}
               alt="LinkedIn"
-              className="w-[200px] h-[50px] mr-2"
+              className="w-[196px] h-auto mr-auto ml-6"
             />
           </a>
           <a href="https://www.linkedin.com/company/tech-devise/posts/?feedView=all" className="bg-green-500 text-white px-6 py-4 rounded-tr-2xl flex items-center justify-center text-xl font-bold">
             <img
               src={Upworklogo}
               alt="Upwork"
-              className="w-[200px] h-[50px] mr-2"
+              className="w-[137px] h-auto mr-auto"
             />
           </a>
           <a href="https://www.linkedin.com/company/tech-devise/posts/?feedView=all" className="bg-[#17313B] text-white w-[440px] h-[132px] opacity-100 flex items-center justify-center text-xl font-bold">
             <img
               src={Clutch}
               alt="clutch"
-              className="w-[200px] h-[50px] mr-2"
+              className="w-[120px] h-auto mr-auto ml-6"
             />
           </a>
           <a href="https://www.linkedin.com/company/tech-devise/posts/?feedView=all" className="bg-[#0AB67B] text-white px-6 py-4 rounded-br-2xl flex items-center justify-center text-xl font-bold">
             <img
               src={Trustpilot}
               alt="Trustpilot"
-              className="w-[200px] h-[50px] mr-2"
+              className="w-[206px] h-auto mr-auto"
             />
           </a>
         </div>
