@@ -6,7 +6,7 @@ import ServicesDropdown from "../components/ServicesDropdown";
 import "../styles/components/Navbar.css";
 import Button from '../components/Button';
 import techdeviselogo from '../assets/techdeviselogo.png'
-import Techdeviselogo2 from "../assets/techdeviselogo2.svg";
+import Techdeviselogo2 from "../assets/Techdeviselogo2.svg";
 
 const Navbar = () => {
   const location = useLocation(); // Step 2: Get current location
