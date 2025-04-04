@@ -1,17 +1,25 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ServicesDropdown from "../components/ServicesDropdown";
 
 // import Services from "../components/Services";
 import "../styles/components/Navbar.css";
 import Button from '../components/Button';
 import techdeviselogo from '../assets/techdeviselogo.png'
+import Techdeviselogo2 from "../assets/techdeviselogo2.svg";
 
 const Navbar = () => {
+  const location = useLocation(); // Step 2: Get current location
+  const isHomePage = location.pathname === "/";
   const [isOpen, setIsOpen] = useState(false)
   const [servicesDropdown, setServicesDropdown] = useState(false)
   const [blogDropdown, setBlogDropdown] = useState(false)
   const [isSticky, setIsSticky] = useState({ services: false, blog: false })
+
+
+
+
+
 
   const handleServicesHover = (state) => {
     if (!isSticky.services) setServicesDropdown(state)
@@ -42,17 +50,22 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="nav_head absolute left-[120px] top-[33px] w-[1680px] h-[82px] text-white py-4 px-6 flex justify-between items-center bg-cover bg-center opacity-100"
-        style={{ backgroundImage: "url('')" }}
+        className={`nav_head ${isHomePage
+            ? "absolute text-white bg-transparent"
+            : "static bg-white text-black shadow-2xl"
+          } left-[120px] top-[33px] w-[1680px] h-[82px] py-4 px-6 flex justify-between items-center bg-cover bg-center opacity-100`}
+        style={{
+          backgroundImage: isHomePage ? "url('')" : "none"
+        }}
       >
         <div className="flex items-center w-[190.52px] h-[90px] opacity-100">
-        <a href="http://51.21.132.30:3000/" target="_blank" rel="noopener noreferrer">
-          <img
-            alt="Tech Devise Logo"
-            className="w-[179.52px] h-[56px] opacity-100 mr-2"
-            src={techdeviselogo || "/placeholder.svg"}
-          />
-           </a>
+          <a href="http://51.21.132.30:3000/" target="_blank" rel="noopener noreferrer">
+            <img
+              alt="Tech Devise Logo"
+              className="w-[179.52px] h-[56px] opacity-100 mr-2"
+              src={isHomePage ? techdeviselogo : Techdeviselogo2}
+              />
+          </a>
           <span className="text-2xl font-bold"></span>
         </div>
 
@@ -99,11 +112,10 @@ const Navbar = () => {
               Blog <span className="text-[10px]">▼</span>
             </Link>
             <div
-              className={`absolute left-0 mt-2 w-40 bg-white text-black shadow-lg rounded-md transition-all duration-300 ${
-                blogDropdown || isSticky.blog
+              className={`absolute left-0 mt-2 w-40 bg-white text-black shadow-lg rounded-md transition-all duration-300 ${blogDropdown || isSticky.blog
                   ? "opacity-100 visible translate-y-0"
                   : "opacity-0 invisible -translate-y-2"
-              }`}
+                }`}
             >
               <Link to="/blog/blog-details" className="block px-4 py-2 hover:bg-gray-200">
                 Blog Details

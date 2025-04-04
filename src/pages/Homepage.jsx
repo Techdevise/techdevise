@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../layout/Navbar';
 import '../styles/pages/Homepage.css'; 
 import TechAboutSection from '../components/TechAboutSection';
 import TrustedBy from './TrustedBy';
@@ -15,7 +16,7 @@ import Googleanaylicts from "../assets/Googleanaylicts.svg"
 import future from "../assets/future.png"
 import lamp from "../assets/lamp.png"
 import light from "../assets/light.png"
-import Group from '../assets/Group 1.png';
+// import Group from '../assets/Group 1.png';
 import Line from '../assets/Line.png'
 // import Rectangle from '../assets/Rectangle 14.png';
 import ContactForm from './ContactForm';
@@ -42,8 +43,10 @@ const ServiceCard = ({ title, description, imgSrc, bgColor, cornerRadius }) => (
 function Homepage() {
   return (
     <main className="relative bg-[#061611] w-[1920px] h-full">
-      <div className="relative w-[1920px] h-full bg-no-repeat bg-center bg-cover"
-        style={{ backgroundImage: `url(${Group})` }}>
+      
+      <div className="home-bg relative">
+      <Navbar />
+
 
         {/* Main Content Section */}
         <div className="relative z-10 left-[114px] top-[300px] w-[911px] pb-[100px]">
@@ -121,14 +124,10 @@ function Homepage() {
             <span className="text-4xl w-[50px]">→</span>
           </button>
         </div>
-
-        {/* TechSolutions Section */}
-        <div className="relative z-10 mt-[50px] mx-auto w-[1676px] h-auto">
-          {/* <TechSolutions /> */}
         </div>
 
         {/* Trusted By Section */}
-        <div className="relative z-10 mt-[245px] h-[166px] flex items-center">
+        <div className="relative z-10 mt-[-10px] h-[166px] flex items-center">
           <TrustedBy />
 
 
@@ -217,7 +216,7 @@ function Homepage() {
 {/* <div className="h-[100px]"></div> */}
 
      
-      </div>
+     
     </main>
   );
 }

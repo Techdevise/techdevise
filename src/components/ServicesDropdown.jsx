@@ -9,7 +9,7 @@ import Qualityanay from "../assets/Qualityanay.png"
 import Blockchaindevelopment from "../assets/Blockchaindevelopment.png"
 import Mobileimage from "../assets/Mobileimage.png"
 
-const ServicesDropdown = ({ isVisible }) => {
+const ServicesDropdown = ({ isVisible, darkMode }) => {
   if (!isVisible) return null
 
   return (

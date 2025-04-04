@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../layout/Navbar'
+// import Navbar from '../layout/Navbar'
 // import Footer from '../layout/Footer'
 import TeamShowcase from './TeamShowcase'
 import LocationSection from './LocationSection'
@@ -11,7 +11,7 @@ import teams from "../assets/teams.png";
 function About() {
     return (
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
             {/* Hero Section */}
             <div
                 className="relative w-[1675px] h-[812px] mx-auto mt-[142px] mb-[50px] bg-no-repeat bg-center bg-cover"

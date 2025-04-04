@@ -24,10 +24,10 @@ export default function IOSAppDevelopment() {
   ]
 
   return (
-    <div className="absolute w-[1680px] h-[500px] bg-white  mx-auto bg-[#ffffff]  rounded-[20px] flex items-center overflow-hidden shadow-lg mt-[400px] ml-[-420px]">
+    <div className="w-[1680px] h-[500px] bg-white  mx-auto bg-[#ffffff]  rounded-[20px] flex items-center overflow-hidden shadow-lg">
       <div className="w-full h-full px-12 py-8 relative">
         {/* Vertical "Solutions to Explore" text */}
-        <div className="absolute left-8 top-1/2 -translate-y-1/2 transform">
+        <div className="left-8 top-1/2 -translate-y-1/2 transform">
           <div className="flex flex-col items-center">
             <div className="text-[#529D92] font-medium -rotate-90 whitespace-nowrap text-xl tracking-wide origin-center translate-y-20">
               Solutions to Explore
@@ -74,7 +74,7 @@ export default function IOSAppDevelopment() {
                   alt="iOS App Development Team"
                   className="w-full h-auto"
                 />
-                <div className="absolute bottom-0 left-0 bg-blue-400 text-white text-xs px-2 py-1">338 × 286.49</div>
+               
               </div>
             </div>
           </div>

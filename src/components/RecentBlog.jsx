@@ -1,7 +1,7 @@
 import React from "react";
-import Rectangle1 from "../assets/Rectangle 184.png";
-import Rectangle2 from "../assets/Rectangle 185.png";
-import Rectangle3 from "../assets/Rectangle 186.png";
+import Recentblog1 from "../assets/Recentblog1.svg";
+import Recentblog2 from "../assets/Recentblog2.svg";
+import Recentblog3 from "../assets/Recentblog3.svg";
 import Rectangle4 from "../assets/Rectangle 187.png";
 import Rectangle5 from "../assets/Rectangle 188.png";
 import Rectangle6 from "../assets/Rectangle 189.png";
@@ -9,33 +9,33 @@ import Rectangle6 from "../assets/Rectangle 189.png";
 const blogs = [
   {
     id: 1,
-    image: Rectangle1,
-    category: "Design",
+    image: Recentblog1,
+    category: "Wordpress",
     readTime: "5 min read",
-    date: "30 March 2024",
-    title: "Innovative Design: Crafting Seamless User Experiences",
+    date: "30 June 2020",
+    title: "Want to change your WordPress theme? Here’s what you should consider",
     description:
-      "Discover the latest trends, principles, and best practices in design that enhance usability, aesthetics, and functionality for a flawless user experience.",
+      "Changing WordPress theme is not that complicated a job, but it does require expertise and there are a few things that you have to take care of. Here are the things that you have to consider before change your theme on WordPress website.",
   },
   {
     id: 2,
-    image: Rectangle2,
-    category: "Management",
+    image: Recentblog2,
+    category: "Wed development",
     readTime: "5 min read",
-    date: "30 March 2024",
-    title: "Effective Management Strategies for Business Growth",
+    date: "30 June 2020",
+    title: "Cheap web development – why you shouldn’t fall prey!",
     description:
-      "Discover key management strategies to enhance productivity, streamline operations, and drive business success. Learn expert tips on leadership and team collaboration.",
+      "Quality web development is a pricey affair. A well-made website with necessary functionalities will cost you a few hundred dollars. But since many wannabe webowners do not want to spend that much on a website, they tend to hire developers who promise to do the work for peanuts.",
   },
   {
     id: 3,
-    image: Rectangle3,
-    category: "Research",
+    image: Recentblog3,
+    category: "Wordpress plugins",
     readTime: "5 min read",
-    date: "30 March 2024",
-    title: "The Power of Research in Driving Innovation",
+    date: "30 November 2024",
+    title: "Premium WordPress plugins – are they worth paying for?",
     description:
-      "Research is the foundation of innovation, enabling businesses to make data-driven decisions, identify new opportunities, and stay ahead of the competition.",
+      "If you have been working with WordPress for long enough, you must have seen 3 different types of plugins available in the WordPress store – Free, Premium, and Freemium versions. Mostly people tend to use the freemium plugins.",
   },
 
  

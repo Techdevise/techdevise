@@ -11,7 +11,7 @@ import AVR from "../assets/AVR.png"
 
 const IndustryVision = () => {
   return (
-    <div className="bg-[#061611] text-white mx-auto py-12 px-8 w-full max-w-[1680px] border border-[#2d4642] rounded-[20px] relative overflow-hidden">
+    <div className="bg-[#061611] text-white mx-auto py-12 px-8 w-full max-w-[1680px] border border-[#2d4642] rounded-[20px] relative overflow-hidden mt-[100px]">
       {/* Header Section */}
       <div className="flex flex-col lg:flex-row justify-between gap-8 mb-32">
         {/* Left side - Title */}

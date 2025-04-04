@@ -1,30 +1,30 @@
 import React from "react";
 
 // Import images
-import Rectangle from "../assets/Rectangle 180.png";
-import Rectangle1 from "../assets/Rectangle 181.png";
-import Rectangle2 from "../assets/Rectangle 182.png";
-import Rectangle3 from "../assets/Rectangle 183.png";
+import Blogimage1 from "../assets/Blogimage1.svg";
+import Blogimage2 from "../assets/Blogimage2.svg";
+import Blogimage3 from "../assets/Blogimage3.svg";
+import Blogimage4 from "../assets/Blogimage4.svg";
 
 // Blog data
 const blogs = [
   {
     id: 1,
-    image: Rectangle1,
-    category: "Design",
+    image: Blogimage2,
+    category: "Wordpress",
     readTime: "5 min read",
     date: "30 March 2024",
   },
   {
     id: 2,
-    image: Rectangle2,
+    image: Blogimage3,
     category: "Management",
     readTime: "5 min read",
     date: "30 March 2024",
   },
   {
     id: 3,
-    image: Rectangle3,
+    image: Blogimage4,
     category: "Research",
     readTime: "5 min read",
     date: "30 March 2024",
@@ -42,7 +42,7 @@ const BlogCard = () => {
        {/* Left Side Image */}
        <div className="w-[672px] h-[338px]">
          <img
-           src={Rectangle}
+           src={Blogimage1}
            alt="Blog Thumbnail"
            className="w-full h-full object-cover rounded-l-[20px] ml-[10px]"
          />
@@ -52,7 +52,7 @@ const BlogCard = () => {
        <div className="flex-1 p-6 text-white w-[838] h-[300px] mt-[-50px]">
          {/* Category and Read Time */}
          <div className="flex items-center gap-2 mb-4">
-           <span className="text-[#157B6C] font-semibold">Technology</span>
+           <span className="text-[#157B6C] font-semibold">Wordpress plugin</span>
            <span className="text-gray-400">•</span>
            <span className="text-[#157B6C]">30 min read</span>
          </div>
@@ -64,8 +64,7 @@ const BlogCard = () => {
  
          {/* Description */}
          <p className="w-[868px] h-[220px] font-montserrat font-semibold text-[40px] text-[#000000] opacity-100 leading-relaxed mt-[-50px]">
-           Discover the latest advancements in the tech industry, where
-           innovation drives progress and shapes the future.
+         Premium WordPress plugins – are they worth paying for?
          </p>
  
          {/* Date */}
@@ -107,9 +106,9 @@ const BlogCard = () => {
 
               {/* Title */}
               <h2 className="text-[24px] font-bold leading-tight text-black mb-4">
-              Innovative Design: Crafting Seamless User Experiences
+              Want to change your WordPress theme? Here’s what you should consider
               </h2>
-              <p>Discover the latest trends, principles, and best practices in design that enhance usability, aesthetics, and functionality for a flawless user experience.</p>
+              <p>Changing WordPress theme is not that complicated a job, but it does require expertise and there are a few things that you have to take care of. Here are the things that you have to consider before change your theme on WordPress website.</p>
 
               {/* Date */}
               <div className="mt-4 text-[#9F9F9F] text-[16px]">

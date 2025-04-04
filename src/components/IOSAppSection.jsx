@@ -3,7 +3,7 @@ import Iosabout from "../assets/Iosabout.png";
 
 const IOSAppSection = () => {
   return (
-    <div className="absolute inset-x-0 w-[1950px] h-[550px] bg-[#f4f9cd] flex items-center overflow-hidden px-16">
+    <div className="w-full inset-x-0 h-[550px] bg-[#DEEA99] flex items-center overflow-hidden px-16">
       {/* Left Side: Image */}
       <div className="w-1/3 ml-15">
         <img

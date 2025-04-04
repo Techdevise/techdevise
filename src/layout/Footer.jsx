@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr className="border-gray-500 my-8" />
+        <hr className="border-[#217669] my-8" />
 
         {/* Middle Section */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

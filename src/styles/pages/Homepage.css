@@ -8,18 +8,14 @@
     border-bottom: 1px solid #1c3531;
     padding-bottom: 21px;
 }
-/* Add to Homepage.css */
-main {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+.home-bg {
+    background-image: url('../../assets/Homebgbanner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 849px; 
+}
+
   
-  /* Ensure content pushes footer down */
-  #root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
   
-  /* Remove any fixed heights from sections */

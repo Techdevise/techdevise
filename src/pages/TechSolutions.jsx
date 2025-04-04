@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/pages/TechSolutions.css";
 import React1 from "../assets/React1.svg"
 import Vue from "../assets/Vue.svg";
 import Javascript from "../assets/Javascript.svg";
@@ -77,7 +78,7 @@ const TechSolutions = () => {
 
   return (
     <div
-      className="border-2 p-6 rounded-[26px] border border-[#2d4642] w-[1680px] h-[565px] z-20 relative ml-[110px] mt-[150px] bg-no-repeat bg-center bg-cover"
+      className="mask_group border-2 p-6 rounded-[26px] border border-[#2d4642] w-[1680px] h-[565px] z-20 relative bg-no-repeat bg-center bg-cover"
       style={{ backgroundImage: `url(${Maskgroup})` }}
     >
       <div className="flex flex-col md:flex-row justify-between items-center h-full">
